@@ -1,14 +1,18 @@
 package com.jordsta.stuff;
 
 import com.jordsta.stuff.init.itemRegist;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class JCreativeTabs
-{
-    public static final net.minecraft.creativetab.CreativeTabs TAB = new CreativeTabs(Reference.MODID.toLowerCase())
-    {
+/**
+ * Created by Elec332 on 13-12-2014.
+ */
+public class JordTab {
+    public static CreativeTabs JordTab = new CreativeTabs("JordTab") {
         @Override
+        @SideOnly(Side.CLIENT)
         public Item getTabIconItem()
         {
             return itemRegist.moneyPick;

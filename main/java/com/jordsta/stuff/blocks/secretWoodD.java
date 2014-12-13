@@ -1,7 +1,6 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
-
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,7 +14,7 @@ public class secretWoodD extends Block {
 	public secretWoodD(){
 		super(Material.wood);
 		setBlockName("secretWoodD");
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
 	}
 	

@@ -1,6 +1,6 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.block.Block;
@@ -17,7 +17,7 @@ public class safetyTorch extends Block implements ITileEntityProvider
 	public safetyTorch()
 	{
 		super(Material.glass);
-		this.setCreativeTab(JCreativeTabs.TAB);
+		this.setCreativeTab(JordTab.JordTab);
 		this.setBlockName("safetyTorch");
 		this.setLightLevel(4.0F);
 		this.setTickRandomly(true);

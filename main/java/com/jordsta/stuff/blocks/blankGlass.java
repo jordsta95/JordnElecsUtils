@@ -1,6 +1,6 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.block.Block;
@@ -13,7 +13,7 @@ public class blankGlass extends Block {
 		super(Material.glass);
 		setBlockName("blankGlass");
 		setBlockTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
 		setHardness(2.0f);
 		setResistance(1.0f);
 		RegisterHelper.registerBlock(this);

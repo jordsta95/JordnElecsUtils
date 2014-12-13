@@ -1,11 +1,9 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
-
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -16,7 +14,7 @@ public class secretGravel extends BlockFalling {
 	public secretGravel(){
 		super(Material.sand);
 		setBlockName("secretGravel");
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
 	}
 	

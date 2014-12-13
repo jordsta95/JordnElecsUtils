@@ -1,6 +1,7 @@
 package com.jordsta.stuff.items;
 
 import com.jordsta.stuff.JCreativeTabs;
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.item.ItemSpade;
@@ -10,7 +11,7 @@ public class moneyShovel extends ItemSpade{
         super(mat);
     	setUnlocalizedName("moneyShovel");
 		setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
         RegisterHelper.registerItem(this);
     }
 }

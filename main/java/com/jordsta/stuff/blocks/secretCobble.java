@@ -1,7 +1,6 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
-
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +15,7 @@ public class secretCobble extends Block {
 	public secretCobble(){
 		super(Material.rock);
 		setBlockName("secretCobble");
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
 	}
 	

@@ -1,7 +1,6 @@
 package com.jordsta.stuff.blocks;
 
-import com.jordsta.stuff.JCreativeTabs;
-import com.jordsta.stuff.Main;
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.init.itemRegist;
@@ -18,7 +17,7 @@ public class endOre extends Block {
 		super(Material.rock);
 		setBlockName("endOre");
 		setBlockTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
-		setCreativeTab(JCreativeTabs.TAB);
+		setCreativeTab(JordTab.JordTab);
 		setHardness(20.0f);
 		setResistance(3.0f);
 		setHarvestLevel("pickaxe", 7);
