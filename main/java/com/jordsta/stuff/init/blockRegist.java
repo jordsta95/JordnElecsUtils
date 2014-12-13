@@ -13,6 +13,16 @@ public class blockRegist {
     public static Block dropLight;
     public static Block blankGlass;
     public static Block secretStone;
+    public static Block secretDirt;
+    public static Block secretWoodO;
+    public static Block secretWoodB;
+    public static Block secretWoodS;
+    public static Block secretWoodJ;
+    public static Block secretWoodD;
+    public static Block secretWoodA;
+    public static Block secretCobble;
+    public static Block secretGravel;
+    public static Block secretSand;
 
     public static void Register() {
         endOre = new endOre();
@@ -20,5 +30,15 @@ public class blockRegist {
         dropLight = new dropLight();
         blankGlass = new blankGlass();
         secretStone = new secretStone();
+        secretCobble = new secretCobble();
+        secretDirt = new secretDirt();
+        secretSand = new secretSand();
+        secretGravel = new secretGravel();
+        secretWoodO = new secretWoodO();
+        secretWoodB = new secretWoodB();
+        secretWoodS = new secretWoodS();
+        secretWoodJ = new secretWoodJ();
+        secretWoodA = new secretWoodA();
+        secretWoodD = new secretWoodD();
     }
 }

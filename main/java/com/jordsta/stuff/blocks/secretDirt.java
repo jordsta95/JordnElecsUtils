@@ -2,6 +2,7 @@ package com.jordsta.stuff.blocks;
 
 import com.jordsta.stuff.JCreativeTabs;
 
+import com.jordsta.stuff.helpers.RegisterHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -15,6 +16,7 @@ public class secretDirt extends Block {
 		super(Material.grass);
 		setBlockName("secretDirt");
 		setCreativeTab(JCreativeTabs.TAB);
+		RegisterHelper.registerBlock(this);
 	}
 	
 	@Override
