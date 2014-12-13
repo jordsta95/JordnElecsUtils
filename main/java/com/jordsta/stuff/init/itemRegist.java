@@ -1,5 +1,6 @@
 package com.jordsta.stuff.init;
 
+import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.*;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
@@ -21,13 +22,13 @@ public class itemRegist {
     public static Item diamondRod;;
 
     public static void Register() {
-        unrefinedCurrency = new unrefinedCurrency();
-        moneyPick = new moneyPick(20, MONEY);
-        lightDust = new lightDust();
-        ironNugget = new ironNugget();
-        moneyBlade = new moneyBlade(20, MONEY2);
-        moneyShovel = new moneyShovel(20, MONEY);
-        moneyAxe = new moneyAxe(20, MONEY);
-        diamondRod = new diamondRod();
+        RegisterHelper.registerItem(unrefinedCurrency = new baseItem("unrefinedCurrency"));
+        RegisterHelper.registerItem(moneyPick = new moneyPick(20, MONEY));
+        RegisterHelper.registerItem(lightDust = new baseItem("lightDust"));
+        RegisterHelper.registerItem(ironNugget = new baseItem("ironNugget"));
+        RegisterHelper.registerItem(moneyBlade = new moneyBlade(20, MONEY2));
+        RegisterHelper.registerItem(moneyShovel = new moneyShovel(20, MONEY));
+        RegisterHelper.registerItem(moneyAxe = new moneyAxe(20, MONEY));
+        RegisterHelper.registerItem(diamondRod = new baseItem("diamondRod"));
     }
 }
