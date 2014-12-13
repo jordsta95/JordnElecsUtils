@@ -2,6 +2,7 @@ package com.jordsta.stuff.blocks;
 
 import com.jordsta.stuff.JCreativeTabs;
 import com.jordsta.stuff.Reference;
+import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -23,6 +24,7 @@ public class safetyTorch extends Block implements ITileEntityProvider
 		//setBlockTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
 		setHardness(1.0f);
 		setResistance(1.0f);
+		RegisterHelper.registerBlock(this);
 	}
 	
 	@Override

@@ -1,5 +1,6 @@
 package com.jordsta.stuff;
 
+import com.jordsta.stuff.init.itemRegist;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +17,7 @@ public class jordsUtils extends CreativeTabs {
     @SideOnly(Side.CLIENT)
     public Item getTabIconItem()
     {
-        return Main.moneyPick;
+        return itemRegist.moneyPick;
     }
 
 }

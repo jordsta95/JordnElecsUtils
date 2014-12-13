@@ -1,5 +1,6 @@
-package com.jordsta.stuff;
+package com.jordsta.stuff.world;
 
+import com.jordsta.stuff.init.blockRegist;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -29,7 +30,7 @@ public class endOreGen implements IWorldGenerator {
             int xCoord = chunkX + random.nextInt(16);
             int yCoord = random.nextInt(60);
             int zCoord = chunkZ + random.nextInt(16);
-        (new WorldGenMinable(Main.endOre, 7, Blocks.end_stone)).generate(world, random, xCoord, yCoord, zCoord);} 
+        (new WorldGenMinable(blockRegist.endOre, 7, Blocks.end_stone)).generate(world, random, xCoord, yCoord, zCoord);}
     }
  
     private void generateSurface(World world, Random random, int chunkX, int chunkZ) {

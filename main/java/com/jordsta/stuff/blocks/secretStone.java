@@ -1,6 +1,7 @@
 package com.jordsta.stuff.blocks;
 
 import com.jordsta.stuff.JCreativeTabs;
+import com.jordsta.stuff.helpers.RegisterHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockStone;
@@ -14,6 +15,7 @@ public class secretStone extends BlockStone {
 	{
 		setBlockName("secretStone");
 		setCreativeTab(JCreativeTabs.TAB);
+		RegisterHelper.registerBlock(this);
 	}
 	
 	@Override

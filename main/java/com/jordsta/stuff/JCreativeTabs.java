@@ -1,5 +1,6 @@
 package com.jordsta.stuff;
 
+import com.jordsta.stuff.init.itemRegist;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -10,7 +11,7 @@ public class JCreativeTabs
         @Override
         public Item getTabIconItem()
         {
-            return Main.moneyPick;
+            return itemRegist.moneyPick;
         }
     };
 }

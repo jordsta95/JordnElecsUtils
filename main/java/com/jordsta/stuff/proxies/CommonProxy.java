@@ -1,4 +1,4 @@
-package com.jordsta.stuff;
+package com.jordsta.stuff.proxies;
 
 
 public class CommonProxy {
