@@ -1,6 +1,5 @@
 package com.jordsta.stuff.items;
 
-import com.jordsta.stuff.JCreativeTabs;
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;

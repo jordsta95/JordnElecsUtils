@@ -23,12 +23,12 @@ public class itemRegist {
 
     public static void Register() {
         RegisterHelper.registerItem(unrefinedCurrency = new baseItem("unrefinedCurrency"));
-        RegisterHelper.registerItem(moneyPick = new moneyPick(20, MONEY));
+        moneyPick = new moneyPick(20, MONEY);
         RegisterHelper.registerItem(lightDust = new baseItem("lightDust"));
         RegisterHelper.registerItem(ironNugget = new baseItem("ironNugget"));
-        RegisterHelper.registerItem(moneyBlade = new moneyBlade(20, MONEY2));
-        RegisterHelper.registerItem(moneyShovel = new moneyShovel(20, MONEY));
-        RegisterHelper.registerItem(moneyAxe = new moneyAxe(20, MONEY));
+        moneyBlade = new moneyBlade(20, MONEY2);
+        moneyShovel = new moneyShovel(20, MONEY);
+        moneyAxe = new moneyAxe(20, MONEY);
         RegisterHelper.registerItem(diamondRod = new baseItem("diamondRod"));
     }
 }
