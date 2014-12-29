@@ -34,7 +34,7 @@ public class Main
     	//Register Blocks
 		blockRegist.Register();
 
-		//Register Items
+		//Register items
 		itemRegist.Register();
 
 		//OreDict

@@ -10,6 +10,7 @@ import net.minecraft.util.Vec3;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class InterdictionTile extends TileEntity
 {
 	private static List<Class> blacklist = new ArrayList(); 
