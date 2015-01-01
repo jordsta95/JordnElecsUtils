@@ -8,6 +8,6 @@ import com.jordsta.stuff.helpers.RegisterHelper;
 public class oredictRegist {
 
     public static void Register() {
-        //RegisterHelper.registerOreDict(itemRegist.ironNugget, "nuggetIron");
+        RegisterHelper.registerOreDict(itemRegist.ironNugget, "nuggetIron");
     }
 }

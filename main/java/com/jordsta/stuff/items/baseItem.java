@@ -7,8 +7,8 @@ import net.minecraft.item.Item;
 /**
  * Created by Elec332 on 13-12-2014.
  */
-public class unrefinedCurrency extends Item{
-    public unrefinedCurrency(String name){
+public class baseItem extends Item{
+    public baseItem(String name){
         setCreativeTab(JordTab.JordTab);
         setUnlocalizedName(name);
         setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));

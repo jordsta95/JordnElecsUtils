@@ -1,7 +1,6 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.blocks.*;
-
 import net.minecraft.block.Block;
 
 /**
@@ -24,7 +23,6 @@ public class blockRegist {
     public static Block secretCobble;
     public static Block secretGravel;
     public static Block secretSand;
-    public static Block superiumOre;
 
     public static void Register() {
         endOre = new endOre();
@@ -42,6 +40,5 @@ public class blockRegist {
         secretWoodJ = new secretWoodJ();
         secretWoodA = new secretWoodA();
         secretWoodD = new secretWoodD();
-        superiumOre = new superiumOre();
     }
 }
