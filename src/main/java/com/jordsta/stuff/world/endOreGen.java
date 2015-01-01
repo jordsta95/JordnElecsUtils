@@ -28,7 +28,7 @@ public class endOreGen implements IWorldGenerator {
     private void generateEnd(World world, Random random, int chunkX, int chunkZ) {
         for(int i = 0; i < 60; i++){
             int xCoord = chunkX + random.nextInt(16);
-            int yCoord = random.nextInt(60);
+            int yCoord = random.nextInt(10);
             int zCoord = chunkZ + random.nextInt(16);
         (new WorldGenMinable(blockRegist.endOre, 7, Blocks.end_stone)).generate(world, random, xCoord, yCoord, zCoord);}
     }
