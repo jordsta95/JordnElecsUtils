@@ -24,6 +24,7 @@ public class secretDirt extends Block {
         return null;
     }
 
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister)

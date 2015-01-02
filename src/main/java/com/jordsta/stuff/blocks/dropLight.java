@@ -4,8 +4,11 @@ import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.init.itemRegist;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 import java.util.Random;
@@ -25,9 +28,9 @@ public class dropLight extends BlockFalling {
 		}
 	public static boolean fallinstantly = true;
 	
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+	public Block getBlockDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
 	{
-		return itemRegist.lightDust;
+		return Blocks.glowstone;
 	}
 
 

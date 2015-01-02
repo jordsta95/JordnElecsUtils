@@ -19,7 +19,7 @@ public class itemRegist {
     public static final Item.ToolMaterial SUPER2 = EnumHelper.addToolMaterial("SUPER2", 7, 2000, 75.0F, 36.0F, 25);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
-
+    public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
     
     public static Item unrefinedCurrency;
     public static Item moneyPick;
@@ -62,10 +62,10 @@ public class itemRegist {
         RegisterHelper.registerItem(superHelmet = new superHelmet(SuperArmour, 0));
         RegisterHelper.registerItem(superLegs = new superLegs(SuperArmour, 2));
         RegisterHelper.registerItem(superBoots = new superBoots(SuperArmour, 3));
-        RegisterHelper.registerItem(uberChest = new uberChest(SuperArmour, 1));
-        RegisterHelper.registerItem(uberHelmet = new uberHelmet(SuperArmour, 0));
-        RegisterHelper.registerItem(uberLegs = new uberLegs(SuperArmour, 2));
-        RegisterHelper.registerItem(uberBoots = new uberBoots(SuperArmour, 3));
+        RegisterHelper.registerItem(uberChest = new uberChest(UberArmour, 1));
+        RegisterHelper.registerItem(uberHelmet = new uberHelmet(UberArmour, 0));
+        RegisterHelper.registerItem(uberLegs = new uberLegs(UberArmour, 2));
+        RegisterHelper.registerItem(uberBoots = new uberBoots(UberArmour, 3));
     }
     
 }

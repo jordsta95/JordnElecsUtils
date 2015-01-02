@@ -75,7 +75,7 @@ public class recipeRegist {
         	"GRD",'G',new ItemStack(Items.glowstone_dust),'R', new ItemStack(Items.redstone),'D',diamond
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.superAxe), new Object[]{
-        	"SS ","SG"," G",'S',superium,'G',gold
+        	"SS","SG"," G",'S',superium,'G',gold
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.superPick), new Object[]{
         	"SSS"," G "," G ",'S',superium,'G',gold
@@ -86,8 +86,32 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(itemRegist.superSword), new Object[]{
         	" S "," S "," G ",'S', superium,'G',gold
         });
-        GameRegistry.addRecipe(new ItemStack(itemRegist.superAxe), new Object[]{
-        	"SSS","SDS","SSS",'S',new ItemStack(Items.emerald),'D',diaBlock
+        GameRegistry.addRecipe(new ItemStack(itemRegist.superium), new Object[]{
+        	"SSS","SDS","SSS",'S',Blocks.emerald_block,'D',diaBlock
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.superHelmet), new Object[]{
+        	"SSS","S S",'S',superium
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.superBoots), new Object[]{
+        	"S S","S S",'S',superium
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.superLegs), new Object[]{
+        	"SSS","S S","S S",'S',superium
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.superChest), new Object[]{
+        	"S S","SSS","SSS",'S',superium
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberHelmet), new Object[]{
+        	"SSS","S S",'S',unrefinedCurrency
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberBoots), new Object[]{
+        	"S S","S S",'S',unrefinedCurrency
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberLegs), new Object[]{
+        	"SSS","S S","S S",'S',unrefinedCurrency
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberChest), new Object[]{
+        	"S S","SSS","SSS",'S',unrefinedCurrency
         });
     }
     
