@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class secretCobble extends Block {
 
 	public secretCobble(){
-		super(Material.rock);
+		super(Material.plants);
 		setBlockName("secretCobble");
 		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
@@ -24,6 +24,10 @@ public class secretCobble extends Block {
     {
         return null;
     }
+	
+	public boolean isOpaqueCube(){
+		return false;
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)

@@ -55,7 +55,7 @@ public class uberLegs extends ItemArmor implements ISpecialArmor{
 
         if (source.equals(itemRegist.moneyBlade))
         {
-            return new ArmorProperties(1, 1.0D, 80);
+            return new ArmorProperties(1, 1.0D, 150);
         }
         if (source.causeMobDamage(player) != null)
         {

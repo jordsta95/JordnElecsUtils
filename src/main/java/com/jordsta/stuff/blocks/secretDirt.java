@@ -2,9 +2,11 @@ package com.jordsta.stuff.blocks;
 
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.helpers.RegisterHelper;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.AxisAlignedBB;
@@ -12,7 +14,7 @@ import net.minecraft.world.World;
 
 public class secretDirt extends Block {
 	public secretDirt(){
-		super(Material.grass);
+		super(Material.plants);
 		setBlockName("secretDirt");
 		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
@@ -23,6 +25,10 @@ public class secretDirt extends Block {
     {
         return null;
     }
+	
+	public boolean isOpaqueCube(){
+		return false;
+	}
 
 
 	@Override

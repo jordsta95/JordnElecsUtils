@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class secretGravel extends BlockFalling {
 	public secretGravel(){
-		super(Material.sand);
+		super(Material.plants);
 		setBlockName("secretGravel");
 		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
@@ -23,6 +23,10 @@ public class secretGravel extends BlockFalling {
     {
         return null;
     }
+	
+	public boolean isOpaqueCube(){
+		return false;
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)

@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 
 public class secretWoodD extends Block {
 	public secretWoodD(){
-		super(Material.wood);
+		super(Material.plants);
 		setBlockName("secretWoodD");
 		setCreativeTab(JordTab.JordTab);
 		RegisterHelper.registerBlock(this);
@@ -23,6 +23,9 @@ public class secretWoodD extends Block {
     {
         return null;
     }
+	public boolean isOpaqueCube(){
+		return false;
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
