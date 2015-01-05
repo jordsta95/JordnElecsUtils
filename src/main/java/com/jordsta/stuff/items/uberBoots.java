@@ -57,7 +57,7 @@ public class uberBoots extends ItemArmor implements ISpecialArmor{
 
         if (source.equals(itemRegist.moneyBlade))
         {
-            return new ArmorProperties(1, 1.0D, 150);
+            return new ArmorProperties(1, 1.0D, 500000);
         }
         if (source.causeMobDamage(player) != null)
         {
