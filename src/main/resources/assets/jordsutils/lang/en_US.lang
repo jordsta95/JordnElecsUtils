@@ -1,36 +1,18 @@
-## CreativeTab ##
-#################
-itemGroup.jordsutils=Jordan's Stuff
-
-#################
-##    ITEMS    ##
-#################
-item.moneyBlade.name=Uber Blade
-item.moneyAxe.name=Uber Axe
-item.moneyShovel.name=Uber Spade
-item.diamondRod.name=Diamond Rod
+itemGroup.JordTab=Jords Utils
+tile.endOre.name=Uberium Ore
 item.unrefinedCurrency.name=Uberium
 item.moneyPick.name=Uber Pick
 item.lightDust.name=Strengthend Glowstone
 item.ironNugget.name=Iron Nugget
-item.superium.name=Superium
-item.superAxe.name=Super Axe
-item.superSword.name=Super Sword
-item.superPick.name=Super Pickaxe
-item.superShovel.name=Super Spade
-item.superChest.name=Super Chestplate
-item.superHelmet.name=Super Helmet
-item.superLegs.name=Super Trousers
-item.superBoots.name=Super Booties
-
-#################
-##   BLOCKS    ##
-#################
 tile.dropLight.name=Drop Light
 tile.safetyTorch.name=Safety Block
 tile.blankGlass.name=Transparent Block
-tile.endOre.name=Uberium Ore
+itemGroup.jordsutils=Jordan's Stuff
 tile.secretStone.name=Stone
+item.moneyBlade.name=Uber Blade
+item.moneyAxe.name=Uber Axe
+item.moneyShovel.name=Uber Spade
+item.diamondRod.name=Diamond Rod
 tile.secretWoodO.name=Oak Wood Planks
 tile.secretWoodB.name=Birch Wood Planks
 tile.secretWoodS.name=Spruce Wood Planks
@@ -42,3 +24,16 @@ tile.secretGravel.name=Gravel
 tile.secretCobble.name=Cobblestone
 tile.secretDirt.name=Dirt
 tile.superiumOre.name=Superium Ore
+item.superium.name=Superium
+item.superAxe.name=Super Axe
+item.superSword.name=Super Sword
+item.superPick.name=Super Pickaxe
+item.superShovel.name=Super Spade
+item.superChest.name=Super Chestplate
+item.superHelmet.name=Super Helmet
+item.superLegs.name=Super Trousers
+item.superBoots.name=Super Booties
+item.uberChest.name=Uber Chestplate
+item.uberHelmet.name=Uber Helmet
+item.uberLegs.name=Uber Trousers
+item.uberBoots.name=Uber Booties

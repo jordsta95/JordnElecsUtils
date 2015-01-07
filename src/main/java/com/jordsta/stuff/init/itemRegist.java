@@ -42,6 +42,7 @@ public class itemRegist {
     public static Item uberHelmet;
     public static Item uberBoots;
     public static Item uberLegs;
+    public static Item uberMixAxe;
     
     
     public static void Register() {
@@ -66,6 +67,7 @@ public class itemRegist {
         RegisterHelper.registerItem(uberHelmet = new uberHelmet(UberArmour, 0));
         RegisterHelper.registerItem(uberLegs = new uberLegs(UberArmour, 2));
         RegisterHelper.registerItem(uberBoots = new uberBoots(UberArmour, 3));
+        uberMixAxe = new uberMixAxe(20, MONEY);
     }
     
 }
