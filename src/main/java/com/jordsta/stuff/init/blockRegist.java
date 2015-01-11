@@ -25,6 +25,7 @@ public class blockRegist {
     public static Block secretGravel;
     public static Block secretSand;
     public static Block superiumOre;
+    public static Block ultraOre;
 
     public static void Register() {
         endOre = new endOre();
@@ -43,5 +44,6 @@ public class blockRegist {
         secretWoodA = new secretWoodA();
         secretWoodD = new secretWoodD();
         superiumOre = new superiumOre();
+        ultraOre = new ultraOre();
     }
 }

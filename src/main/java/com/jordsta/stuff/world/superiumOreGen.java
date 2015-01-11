@@ -35,7 +35,7 @@ public class superiumOreGen implements IWorldGenerator {
 	                int randPosX = (chunkX * 16) + random.nextInt(16);
 	                int randPosY = random.nextInt(256);
 	                int randPosZ = (chunkZ * 16) + random.nextInt(16);
-	                new WorldGenMinable(blockRegist.superiumOre, 1, 40, Blocks.netherrack).generate(world, random, randPosX, randPosY, randPosZ);
+	                new WorldGenMinable(blockRegist.superiumOre, 1, 20, Blocks.netherrack).generate(world, random, randPosX, randPosY, randPosZ);
 	            }
 	        }
 	        if (!(chunkGenerator instanceof ChunkProviderHell) && !(chunkGenerator instanceof ChunkProviderGenerate))

@@ -1,5 +1,10 @@
 package com.jordsta.stuff;
 
+import java.awt.Dimension;
+
+import net.minecraftforge.common.DimensionManager;
+import Dimension.JordsUtilsDimension;
+
 import com.jordsta.stuff.init.blockRegist;
 import com.jordsta.stuff.init.itemRegist;
 import com.jordsta.stuff.init.oredictRegist;
@@ -24,6 +29,13 @@ public class Main
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
+	
+	
+	
+	public static final int dimensionID = 24;
+	
+	
+	
 
     @EventHandler
     public void preInit (FMLPreInitializationEvent event)
@@ -44,7 +56,10 @@ public class Main
 
 		//Recipes
 		recipeRegist.Register();
-
+		
+		DimensionManager.registerProviderType(Main.dimensionID, JordsUtilsDimension.class, false);
+		DimensionManager.registerDimension(Main.dimensionID, Main.dimensionID);
+		
     }
     
     @EventHandler

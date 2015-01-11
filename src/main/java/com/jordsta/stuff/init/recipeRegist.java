@@ -113,6 +113,18 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(itemRegist.uberChest), new Object[]{
         	"S S","SSS","SSS",'S',unrefinedCurrency
         });
+        GameRegistry.addRecipe(new ItemStack(blockRegist.dropLight), new Object[]{
+        	" G ","GSG"," G ",'G',Items.glowstone_dust,'S',Blocks.sand
+        });
+        GameRegistry.addRecipe(new ItemStack(blockRegist.safetyTorch), new Object[]{
+        	"G G","STS","STS",'G',itemRegist.lightDust,'S',Blocks.stone,'T',Blocks.torch
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.ultraBar), new Object[]{
+        	"SSS","SSS","SSS",'S',itemRegist.ultraShard
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberChest), new Object[]{
+        	" S ","SOS"," S ",'S',Items.gold_nugget,'O',Blocks.gold_ore
+        });
     }
     
 }

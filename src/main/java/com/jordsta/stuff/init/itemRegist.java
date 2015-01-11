@@ -17,6 +17,7 @@ public class itemRegist {
     public static final Item.ToolMaterial MONEY2 = EnumHelper.addToolMaterial("MONEY2", 7, -1, 200.0F, 246.0F, 25);
     public static final Item.ToolMaterial SUPER = EnumHelper.addToolMaterial("SUPER", 7, 2000, 35.0F, 2.0F, 25);
     public static final Item.ToolMaterial SUPER2 = EnumHelper.addToolMaterial("SUPER2", 7, 2000, 75.0F, 36.0F, 25);
+    public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 3, 624, 500.0F, 2.0F, 90);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
@@ -43,6 +44,9 @@ public class itemRegist {
     public static Item uberBoots;
     public static Item uberLegs;
     public static Item uberMixAxe;
+    public static Item ultraShard;
+    public static Item ultraBar;
+    public static Item ultraPick;
     
     
     public static void Register() {
@@ -68,6 +72,10 @@ public class itemRegist {
         RegisterHelper.registerItem(uberLegs = new uberLegs(UberArmour, 2));
         RegisterHelper.registerItem(uberBoots = new uberBoots(UberArmour, 3));
         uberMixAxe = new uberMixAxe(20, MONEY);
+        RegisterHelper.registerItem(ultraShard = new ultraShard());
+        RegisterHelper.registerItem(ultraBar = new ultraBar());
+        ultraPick = new ultraPick(20, ULTRA);
+        
     }
     
 }
