@@ -125,6 +125,10 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(itemRegist.uberChest), new Object[]{
         	" S ","SOS"," S ",'S',Items.gold_nugget,'O',Blocks.gold_ore
         });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.ultraCoal), new Object[]{
+        	"SCC",'S',Items.coal,'C',itemRegist.ultraShard
+        });
+    
     }
     
 }

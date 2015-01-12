@@ -3,8 +3,8 @@ package com.jordsta.stuff;
 import java.awt.Dimension;
 
 import net.minecraftforge.common.DimensionManager;
-import Dimension.JordsUtilsDimension;
 
+import com.jordsta.stuff.dimensions.JordsUtilsDimension;
 import com.jordsta.stuff.init.blockRegist;
 import com.jordsta.stuff.init.itemRegist;
 import com.jordsta.stuff.init.oredictRegist;
@@ -12,6 +12,7 @@ import com.jordsta.stuff.init.recipeRegist;
 import com.jordsta.stuff.proxies.CommonProxy;
 import com.jordsta.stuff.world.endOreGen;
 import com.jordsta.stuff.world.superiumOreGen;
+import com.jordsta.stuff.world.ultraGen;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -43,6 +44,9 @@ public class Main
     	//World gen
     	GameRegistry.registerWorldGenerator(new endOreGen(), -1);
     	GameRegistry.registerWorldGenerator(new superiumOreGen(), 1);
+    	GameRegistry.registerWorldGenerator(new ultraGen(), 0);
+    	
+
 
     	//Register Blocks
 		blockRegist.Register();
@@ -65,5 +69,8 @@ public class Main
     @EventHandler
     public void init(FMLInitializationEvent event){
     	proxy.registerTileEntities();
+    	
+    	//Fuel Handler
+    	GameRegistry.registerFuelHandler(new ultraCoalFuel());
     }
 }

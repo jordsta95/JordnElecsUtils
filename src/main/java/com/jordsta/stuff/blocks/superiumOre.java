@@ -20,7 +20,7 @@ public class superiumOre extends Block {
 			setCreativeTab(JordTab.JordTab);
 			setHardness(16.0f);
 			setResistance(3.0f);
-			setHarvestLevel("pickaxe", 3);
+			setHarvestLevel("pickaxe", 10);
 			RegisterHelper.registerBlock(this);
 		}
 	

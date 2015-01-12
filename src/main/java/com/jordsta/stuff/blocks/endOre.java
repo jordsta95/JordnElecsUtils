@@ -20,7 +20,7 @@ public class endOre extends Block {
 		setCreativeTab(JordTab.JordTab);
 		setHardness(20.0f);
 		setResistance(3.0f);
-		setHarvestLevel("pickaxe", 7);
+		setHarvestLevel("pickaxe", 30);
 		RegisterHelper.registerBlock(this);
 	}
 	

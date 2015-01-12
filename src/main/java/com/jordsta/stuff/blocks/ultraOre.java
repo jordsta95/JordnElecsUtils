@@ -19,7 +19,7 @@ public class ultraOre extends Block {
 		setCreativeTab(JordTab.JordTab);
 		setHardness(20.0f);
 		setResistance(3.0f);
-		setHarvestLevel("pickaxe", 7);
+		setHarvestLevel("pickaxe", 2);
 		RegisterHelper.registerBlock(this);
 	}
 	

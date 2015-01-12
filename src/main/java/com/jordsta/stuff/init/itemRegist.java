@@ -13,11 +13,11 @@ import net.minecraftforge.common.util.EnumHelper;
  */
 public class itemRegist {
 
-    public static final Item.ToolMaterial MONEY = EnumHelper.addToolMaterial("MONEY", 7, -1, 600.0F, 2.0F, 25);
+    public static final Item.ToolMaterial MONEY = EnumHelper.addToolMaterial("MONEY", 36, -1, 600.0F, 2.0F, 25);
     public static final Item.ToolMaterial MONEY2 = EnumHelper.addToolMaterial("MONEY2", 7, -1, 200.0F, 246.0F, 25);
-    public static final Item.ToolMaterial SUPER = EnumHelper.addToolMaterial("SUPER", 7, 2000, 35.0F, 2.0F, 25);
+    public static final Item.ToolMaterial SUPER = EnumHelper.addToolMaterial("SUPER", 24, 2000, 35.0F, 2.0F, 25);
     public static final Item.ToolMaterial SUPER2 = EnumHelper.addToolMaterial("SUPER2", 7, 2000, 75.0F, 36.0F, 25);
-    public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 3, 624, 500.0F, 2.0F, 90);
+    public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 12, 624, 500.0F, 2.0F, 90);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
@@ -47,6 +47,7 @@ public class itemRegist {
     public static Item ultraShard;
     public static Item ultraBar;
     public static Item ultraPick;
+    public static Item ultraCoal;
     
     
     public static void Register() {
@@ -75,6 +76,7 @@ public class itemRegist {
         RegisterHelper.registerItem(ultraShard = new ultraShard());
         RegisterHelper.registerItem(ultraBar = new ultraBar());
         ultraPick = new ultraPick(20, ULTRA);
+        RegisterHelper.registerItem(ultraCoal = new ultraCoal());
         
     }
     
