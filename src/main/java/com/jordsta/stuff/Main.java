@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import net.minecraftforge.common.DimensionManager;
 
 import com.jordsta.stuff.dimensions.JordsUtilsDimension;
+import com.jordsta.stuff.init.biomeRegist;
 import com.jordsta.stuff.init.blockRegist;
 import com.jordsta.stuff.init.itemRegist;
 import com.jordsta.stuff.init.oredictRegist;
@@ -61,8 +62,12 @@ public class Main
 		//Recipes
 		recipeRegist.Register();
 		
+		//Biomes
+		biomeRegist.Register();
+		
 		DimensionManager.registerProviderType(Main.dimensionID, JordsUtilsDimension.class, false);
 		DimensionManager.registerDimension(Main.dimensionID, Main.dimensionID);
+		
 		
     }
     
