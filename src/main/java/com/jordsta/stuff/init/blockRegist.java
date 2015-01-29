@@ -1,8 +1,6 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.blocks.*;
-import com.jordsta.stuff.dimensions.teleporter;
-
 import net.minecraft.block.Block;
 
 /**
@@ -27,7 +25,6 @@ public class blockRegist {
     public static Block secretSand;
     public static Block superiumOre;
     public static Block ultraOre;
-    public static Block teleporter;
 
     public static void Register() {
         endOre = new endOre();
@@ -47,6 +44,5 @@ public class blockRegist {
         secretWoodD = new secretWoodD();
         superiumOre = new superiumOre();
         ultraOre = new ultraOre();
-        teleporter = new teleporter();
     }
 }

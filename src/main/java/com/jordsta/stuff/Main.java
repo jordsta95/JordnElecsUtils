@@ -1,7 +1,7 @@
 package com.jordsta.stuff;
 
-import java.awt.Dimension;
-
+import com.jordsta.stuff.dimensions.DimInfo;
+import elec332.core.api.dimension.DimensionAPI;
 import net.minecraftforge.common.DimensionManager;
 
 import com.jordsta.stuff.dimensions.JordsUtilsDimension;
@@ -20,7 +20,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 
@@ -64,11 +63,9 @@ public class Main
 		
 		//Biomes
 		biomeRegist.Register();
-		
-		DimensionManager.registerProviderType(Main.dimensionID, JordsUtilsDimension.class, false);
-		DimensionManager.registerDimension(Main.dimensionID, Main.dimensionID);
-		
-		
+
+		//Register with DimensionAPI
+		DimensionAPI.Register(new DimInfo());
     }
     
     @EventHandler

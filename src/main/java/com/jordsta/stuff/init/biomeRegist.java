@@ -9,12 +9,8 @@ public class biomeRegist {
 	public static BiomeGenBase deltarianBiome;
 	
 	public static void Register(){
-		registerBiomes();
+		deltarianBiome = new deltarianBiome(45).setBiomeName("Deltarian");
 	}
 
-	private static void registerBiomes() {
-		deltarianBiome = new deltarianBiome(45).setBiomeName("Deltarian");
-		
-	}
 
 }
