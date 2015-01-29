@@ -1,11 +1,13 @@
 package com.jordsta.stuff.init;
 
+import com.jordsta.stuff.JordTab;
+import com.jordsta.stuff.Main;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.*;
 
+import elec332.core.api.dimension.igniter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -51,6 +53,7 @@ public class itemRegist {
     
     
     public static void Register() {
+        new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter");
         RegisterHelper.registerItem(unrefinedCurrency = new unrefinedCurrency("unrefinedCurrency"));
         moneyPick = new moneyPick(20, MONEY);
         RegisterHelper.registerItem(lightDust = new unrefinedCurrency("lightDust"));
@@ -77,7 +80,6 @@ public class itemRegist {
         RegisterHelper.registerItem(ultraBar = new ultraBar());
         ultraPick = new ultraPick(20, ULTRA);
         RegisterHelper.registerItem(ultraCoal = new ultraCoal());
-        
     }
     
 }
