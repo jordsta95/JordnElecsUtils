@@ -59,6 +59,6 @@ public class DimInfo implements IDimAPIProvider {
      */
     @Override
     public Block getPortalFrameBlock() {
-        return blockRegist.endOre;
+        return blockRegist.horizontalPortal;
     }
 }

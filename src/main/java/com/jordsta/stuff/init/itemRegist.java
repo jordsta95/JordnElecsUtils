@@ -2,6 +2,7 @@ package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Main;
+import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.*;
 
@@ -19,7 +20,8 @@ public class itemRegist {
     public static final Item.ToolMaterial MONEY2 = EnumHelper.addToolMaterial("MONEY2", 7, -1, 200.0F, 246.0F, 25);
     public static final Item.ToolMaterial SUPER = EnumHelper.addToolMaterial("SUPER", 24, 2000, 35.0F, 2.0F, 25);
     public static final Item.ToolMaterial SUPER2 = EnumHelper.addToolMaterial("SUPER2", 7, 2000, 75.0F, 36.0F, 25);
-    public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 12, 624, 500.0F, 2.0F, 90);
+    public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 2.0F, 90);
+    public static final Item.ToolMaterial ULTRA2 = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 24.0F, 90);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
@@ -50,10 +52,14 @@ public class itemRegist {
     public static Item ultraBar;
     public static Item ultraPick;
     public static Item ultraCoal;
+    public static Item ultraSword;
+    public static Item ultraShovel;
+    public static Item ultraAxe;
+    public static Item portalIgniter;
     
     
     public static void Register() {
-        new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter");
+    	new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "portalIgniter".substring(5));
         RegisterHelper.registerItem(unrefinedCurrency = new unrefinedCurrency("unrefinedCurrency"));
         moneyPick = new moneyPick(20, MONEY);
         RegisterHelper.registerItem(lightDust = new unrefinedCurrency("lightDust"));
@@ -67,19 +73,23 @@ public class itemRegist {
         superPick = new superPick(20, SUPER);
         superShovel = new superShovel(20, SUPER);
         superSword = new superSword(20, SUPER2);
-        RegisterHelper.registerItem(superChest = new superChest(SuperArmour, 1));
-        RegisterHelper.registerItem(superHelmet = new superHelmet(SuperArmour, 0));
-        RegisterHelper.registerItem(superLegs = new superLegs(SuperArmour, 2));
-        RegisterHelper.registerItem(superBoots = new superBoots(SuperArmour, 3));
-        RegisterHelper.registerItem(uberChest = new uberChest(UberArmour, 1));
-        RegisterHelper.registerItem(uberHelmet = new uberHelmet(UberArmour, 0));
-        RegisterHelper.registerItem(uberLegs = new uberLegs(UberArmour, 2));
-        RegisterHelper.registerItem(uberBoots = new uberBoots(UberArmour, 3));
+        RegisterHelper.registerItem(superChest = new superArmour(SuperArmour, 1).setUnlocalizedName("superChest").setTextureName(Reference.MODID + ":" + "superChest".substring(5)));
+        RegisterHelper.registerItem(superHelmet = new superArmour(SuperArmour, 0).setUnlocalizedName("superHelmet").setTextureName(Reference.MODID + ":" + "superHelmet".substring(5)));
+        RegisterHelper.registerItem(superLegs = new superArmour(SuperArmour, 2).setUnlocalizedName("superLegs").setTextureName(Reference.MODID + ":" + "superLegs".substring(5)));
+        RegisterHelper.registerItem(superBoots = new superArmour(SuperArmour, 3).setUnlocalizedName("superBoots").setTextureName(Reference.MODID + ":" + "superBoots".substring(5)));
+        RegisterHelper.registerItem(uberChest = new uberArmour(UberArmour, 1).setUnlocalizedName("uberChest").setTextureName(Reference.MODID + ":" + "uberChest".substring(5)));
+        RegisterHelper.registerItem(uberHelmet = new uberArmour(UberArmour, 0).setUnlocalizedName("uberHelmet").setTextureName(Reference.MODID + ":" + "uberHelmet".substring(5)));
+        RegisterHelper.registerItem(uberLegs = new uberArmour(UberArmour, 2).setUnlocalizedName("uberLegs").setTextureName(Reference.MODID + ":" + "uberLegs".substring(5)));
+        RegisterHelper.registerItem(uberBoots = new uberArmour(UberArmour, 3).setUnlocalizedName("uberBoots").setTextureName(Reference.MODID + ":" + "uberBoots".substring(5)));
         uberMixAxe = new uberMixAxe(20, MONEY);
         RegisterHelper.registerItem(ultraShard = new ultraShard());
         RegisterHelper.registerItem(ultraBar = new ultraBar());
         ultraPick = new ultraPick(20, ULTRA);
         RegisterHelper.registerItem(ultraCoal = new ultraCoal());
+        ultraSword = new ultraSword(20, ULTRA2);
+        ultraShovel = new ultraShovel(20, ULTRA);
+        ultraAxe = new ultraAxe(20, ULTRA);
+        RegisterHelper.registerItem(portalIgniter = new portalIgniter());
     }
     
 }
