@@ -1,6 +1,7 @@
 package com.jordsta.stuff.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -13,13 +14,11 @@ public class recipeRegist {
     public static void Register() {
         ItemStack unrefinedCurrency = new ItemStack(itemRegist.unrefinedCurrency);
         ItemStack diamond = new ItemStack(Items.diamond);
-        ItemStack blankGlass = new ItemStack(blockRegist.blankGlass);
         ItemStack netherstar = new ItemStack(Items.nether_star);
         ItemStack diaBlock = new ItemStack(Blocks.diamond_block);
         ItemStack superium = new ItemStack(itemRegist.superium);
         ItemStack gold = new ItemStack(Items.gold_ingot);
         ItemStack diaRod = new ItemStack(itemRegist.diamondRod);
-        
 
         GameRegistry.addRecipe(new ItemStack(itemRegist.diamondRod), new Object[]{
                 "D  ", " D ", "  D", 'D', diamond
@@ -41,36 +40,6 @@ public class recipeRegist {
         });
         GameRegistry.addRecipe(new ItemStack(blockRegist.blankGlass, 9), new Object[]{
                 "GGG", "GGG", "GGG", 'G', new ItemStack(Blocks.glass)
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretCobble, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.cobblestone), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretDirt, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.dirt), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretSand, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.sand), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretGravel, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.gravel), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodO, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 0), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodB, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 1), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodS, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 2), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodJ, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 3), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodA, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 4), 'G', blankGlass
-        });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.secretWoodD, 8), new Object[]{
-                "BBB", "BGB", "BBB", 'B', new ItemStack(Blocks.planks, 1, 5), 'G', blankGlass
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.lightDust),new Object[]{
         	"GRD",'G',new ItemStack(Items.glowstone_dust),'R', new ItemStack(Items.redstone),'D',diamond
@@ -130,18 +99,27 @@ public class recipeRegist {
         	"SSS"," G "," G ",'S',itemRegist.ultraBar,'G',Items.stick
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.ultraSword), new Object[]{
-        	"S","S","G",'S',itemRegist.ultraBar,'G',Items.stick
+                "S","S","G",'S',itemRegist.ultraBar,'G',Items.stick
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.ultraShovel), new Object[]{
-        	"S","G","G",'S',itemRegist.ultraBar,'G',Items.stick
+                "S","G","G",'S',itemRegist.ultraBar,'G',Items.stick
         });
         GameRegistry.addRecipe(new ItemStack(itemRegist.ultraAxe), new Object[]{
-        	"SS","SG"," G",'S',itemRegist.ultraBar,'G',Items.stick
+                "SS","SG"," G",'S',itemRegist.ultraBar,'G',Items.stick
         });
-        GameRegistry.addRecipe(new ItemStack(blockRegist.horizontalPortal, 2), new Object[]{
-        	"SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
+        GameRegistry.addRecipe(new ItemStack(blockRegist.PortalFrame, 2), new Object[]{
+                "SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
         });
-          
+    }
+
+    public static void AddGhostBlockRecipePlank(Block block, int meta){
+        AddGhostBlockRecipe(block, Blocks.planks, meta);
+    }
+
+    public static void AddGhostBlockRecipe(Block block, Block material, int meta){
+        GameRegistry.addRecipe(new ItemStack(block, 8), new Object[]{
+                "BBB", "BGB", "BBB", 'B', new ItemStack(material, 1, meta), 'G', new ItemStack(blockRegist.blankGlass)
+        });
     }
     
 }

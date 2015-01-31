@@ -1,42 +1,27 @@
 package com.jordsta.stuff;
 
 import com.jordsta.stuff.dimensions.DimInfo;
-import elec332.core.api.dimension.DimensionAPI;
-import net.minecraftforge.common.DimensionManager;
-
-import com.jordsta.stuff.dimensions.JordsUtilsDimension;
-import com.jordsta.stuff.init.biomeRegist;
-import com.jordsta.stuff.init.blockRegist;
-import com.jordsta.stuff.init.itemRegist;
-import com.jordsta.stuff.init.oredictRegist;
-import com.jordsta.stuff.init.recipeRegist;
+import com.jordsta.stuff.init.*;
 import com.jordsta.stuff.proxies.CommonProxy;
 import com.jordsta.stuff.world.endOreGen;
 import com.jordsta.stuff.world.superiumOreGen;
 import com.jordsta.stuff.world.ultraGen;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import elec332.core.api.dimension.DimensionAPI;
 
 
 @Mod(modid = Reference.MODID, version = Reference.VERSION)
-public class Main
-{
+public class Main {
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
-	
-	
-	
 	public static final int dimensionID = 24;
-	
-	
-	
 
     @EventHandler
     public void preInit (FMLPreInitializationEvent event)
@@ -49,13 +34,10 @@ public class Main
 
     	//Register Blocks
 		blockRegist.Register(event);
+		secretBlocks.Register(event);
 
 		//Register items
 		itemRegist.Register(event);
-
-		//OreDict
-		oredictRegist.Register();
-
 
 		//Recipes
 		recipeRegist.Register();

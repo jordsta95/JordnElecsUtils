@@ -1,19 +1,12 @@
 package com.jordsta.stuff.init;
 
-import java.util.Set;
-
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
 
 public class uberMixAxe extends ItemPickaxe {
     public uberMixAxe(int i, ToolMaterial mat){
