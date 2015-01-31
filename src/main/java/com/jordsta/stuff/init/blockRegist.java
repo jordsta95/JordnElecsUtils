@@ -21,7 +21,7 @@ public class blockRegist {
         ultraOre = Ore("ultraOre", itemRegist.ultraShard, 2, 20.0F, event);
         superiumOre = Ore("superiumOre", itemRegist.superium, 10, 16.0F, event);
         endOre = Ore("endOre", itemRegist.unrefinedCurrency, 20, 20.0F, event);
-        PortalFrame = new baseblock(Material.rock, "horizontalPortal", Tab, event, 1).setToolLevel("pickaxe", 20).setHardness(20.0f).setResistance(3.0f);
+        PortalFrame = new baseblock(Material.rock, "PortalFrame", Tab, event, 1).setToolLevel("pickaxe", 20).setHardness(20.0f).setResistance(3.0f);
         safetyTorch = new safetyTorch();
         dropLight = new baseblock(Material.sand, "dropLight", Tab, event, 0).setHardness(20.0f).setResistance(3.0f).setStepSound(Block.soundTypeGlass).setLightLevel(1.0F);
         blankGlass = new baseblock(Material.glass, "blankGlass", Tab, event, 0).setNoOpaqueCube().setHardness(2.0F).setResistance(1.0F);
