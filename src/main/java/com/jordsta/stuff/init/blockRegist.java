@@ -50,6 +50,7 @@ public class blockRegist {
         secretGravel = new secretGravel();
         superiumOre = new superiumOre();
         ultraOre = new ultraOre();
+        horizontalPortal = new horizontalPortal();
     }
 }
 

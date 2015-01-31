@@ -19,6 +19,7 @@ public class recipeRegist {
         ItemStack superium = new ItemStack(itemRegist.superium);
         ItemStack gold = new ItemStack(Items.gold_ingot);
         ItemStack diaRod = new ItemStack(itemRegist.diamondRod);
+        
 
         GameRegistry.addRecipe(new ItemStack(itemRegist.diamondRod), new Object[]{
                 "D  ", " D ", "  D", 'D', diamond
@@ -128,7 +129,19 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(itemRegist.ultraPick), new Object[]{
         	"SSS"," G "," G ",'S',itemRegist.ultraBar,'G',Items.stick
         });
-    
+        GameRegistry.addRecipe(new ItemStack(itemRegist.ultraSword), new Object[]{
+        	"S","S","G",'S',itemRegist.ultraBar,'G',Items.stick
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.ultraShovel), new Object[]{
+        	"S","G","G",'S',itemRegist.ultraBar,'G',Items.stick
+        });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.ultraAxe), new Object[]{
+        	"SS","SG"," G",'S',itemRegist.ultraBar,'G',Items.stick
+        });
+        GameRegistry.addRecipe(new ItemStack(blockRegist.horizontalPortal, 2), new Object[]{
+        	"SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
+        });
+          
     }
     
 }
