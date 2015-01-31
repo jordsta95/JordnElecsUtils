@@ -6,7 +6,10 @@ import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.*;
 
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.api.dimension.igniter;
+import elec332.core.util.items.baseItem;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -55,41 +58,47 @@ public class itemRegist {
     public static Item ultraSword;
     public static Item ultraShovel;
     public static Item ultraAxe;
-    public static Item portalIgniter;
+
+    static CreativeTabs Tab = JordTab.JordTab;
     
     
-    public static void Register() {
-    	new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "portalIgniter".substring(5));
-        RegisterHelper.registerItem(unrefinedCurrency = new unrefinedCurrency("unrefinedCurrency"));
+    public static void Register(FMLPreInitializationEvent event) {
+
+        new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "portalIgniter".substring(5));
+        unrefinedCurrency = new baseItem("unrefinedCurrency", Tab, event);
+        ultraShard = new baseItem("ultraShard", Tab, event);
+        ultraBar = new baseItem("ultraBar", Tab, event);
+        ultraCoal = new baseItem("ultraCoal", Tab, event);
+        lightDust = new baseItem("lightDust", Tab, event);
+        diamondRod = new baseItem("diamondRod", Tab, event);
+        superium = new baseItem("superium", Tab, event);
+
         moneyPick = new moneyPick(20, MONEY);
-        RegisterHelper.registerItem(lightDust = new unrefinedCurrency("lightDust"));
-       // RegisterHelper.registerItem(ironNugget = new baseItem("ironNugget"));
         moneyBlade = new moneyBlade(20, MONEY2);
         moneyShovel = new moneyShovel(20, MONEY);
         moneyAxe = new moneyAxe(20, MONEY);
-        RegisterHelper.registerItem(diamondRod = new unrefinedCurrency("diamondRod"));
-        RegisterHelper.registerItem(superium = new superium("superium"));
+
         superAxe = new superAxe(20, SUPER);
         superPick = new superPick(20, SUPER);
         superShovel = new superShovel(20, SUPER);
         superSword = new superSword(20, SUPER2);
+
         RegisterHelper.registerItem(superChest = new superArmour(SuperArmour, 1).setUnlocalizedName("superChest").setTextureName(Reference.MODID + ":" + "superChest".substring(5)));
         RegisterHelper.registerItem(superHelmet = new superArmour(SuperArmour, 0).setUnlocalizedName("superHelmet").setTextureName(Reference.MODID + ":" + "superHelmet".substring(5)));
         RegisterHelper.registerItem(superLegs = new superArmour(SuperArmour, 2).setUnlocalizedName("superLegs").setTextureName(Reference.MODID + ":" + "superLegs".substring(5)));
         RegisterHelper.registerItem(superBoots = new superArmour(SuperArmour, 3).setUnlocalizedName("superBoots").setTextureName(Reference.MODID + ":" + "superBoots".substring(5)));
+
         RegisterHelper.registerItem(uberChest = new uberArmour(UberArmour, 1).setUnlocalizedName("uberChest").setTextureName(Reference.MODID + ":" + "uberChest".substring(5)));
         RegisterHelper.registerItem(uberHelmet = new uberArmour(UberArmour, 0).setUnlocalizedName("uberHelmet").setTextureName(Reference.MODID + ":" + "uberHelmet".substring(5)));
         RegisterHelper.registerItem(uberLegs = new uberArmour(UberArmour, 2).setUnlocalizedName("uberLegs").setTextureName(Reference.MODID + ":" + "uberLegs".substring(5)));
         RegisterHelper.registerItem(uberBoots = new uberArmour(UberArmour, 3).setUnlocalizedName("uberBoots").setTextureName(Reference.MODID + ":" + "uberBoots".substring(5)));
+
         uberMixAxe = new uberMixAxe(20, MONEY);
-        RegisterHelper.registerItem(ultraShard = new ultraShard());
-        RegisterHelper.registerItem(ultraBar = new ultraBar());
+
         ultraPick = new ultraPick(20, ULTRA);
-        RegisterHelper.registerItem(ultraCoal = new ultraCoal());
         ultraSword = new ultraSword(20, ULTRA2);
         ultraShovel = new ultraShovel(20, ULTRA);
         ultraAxe = new ultraAxe(20, ULTRA);
-        RegisterHelper.registerItem(portalIgniter = new portalIgniter());
     }
     
 }

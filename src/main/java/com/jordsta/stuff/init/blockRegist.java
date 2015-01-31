@@ -1,8 +1,13 @@
 package com.jordsta.stuff.init;
 
+import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.blocks.*;
 
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import elec332.core.util.blocks.baseblock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockWood;
+import net.minecraft.block.material.Material;
 
 /**
  * Created by Elec332 on 13-12-2014.
@@ -28,7 +33,12 @@ public class blockRegist {
     public static Block ultraOre;
     public static Block horizontalPortal;
 
-    public static void Register() {
+    public static void Register(FMLPreInitializationEvent event) {
+        for (int i = 0; i < BlockWood.field_150096_a.length; i++) {
+            String name = BlockWood.field_150096_a[i];
+            new baseblock(Material.plants, "Ghost" + name, JordTab.JordTab, event, 1).setGhost().setBlockTextureName("minecraft:planks_" + name);
+        }
+
         endOre = new endOre();
         safetyTorch = new safetyTorch();
         dropLight = new dropLight();
@@ -38,14 +48,9 @@ public class blockRegist {
         secretDirt = new secretDirt();
         secretSand = new secretSand();
         secretGravel = new secretGravel();
-        secretWoodO = new secretWoodO();
-        secretWoodB = new secretWoodB();
-        secretWoodS = new secretWoodS();
-        secretWoodJ = new secretWoodJ();
-        secretWoodA = new secretWoodA();
-        secretWoodD = new secretWoodD();
         superiumOre = new superiumOre();
         ultraOre = new ultraOre();
-        horizontalPortal = new horizontalPortal();
     }
 }
+
+

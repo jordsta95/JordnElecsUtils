@@ -45,14 +45,13 @@ public class Main
     	GameRegistry.registerWorldGenerator(new endOreGen(), -1);
     	GameRegistry.registerWorldGenerator(new superiumOreGen(), 1);
     	GameRegistry.registerWorldGenerator(new ultraGen(), 0);
-    	
 
 
     	//Register Blocks
-		blockRegist.Register();
+		blockRegist.Register(event);
 
 		//Register items
-		itemRegist.Register();
+		itemRegist.Register(event);
 
 		//OreDict
 		oredictRegist.Register();
