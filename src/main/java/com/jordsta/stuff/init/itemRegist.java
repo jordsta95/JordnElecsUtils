@@ -6,8 +6,9 @@ import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
+
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import elec332.core.api.dimension.igniter;
+import elec332.core.api.dimension.Igniter;
 import elec332.core.util.items.baseItem;
 import elec332.core.util.items.tools.baseAxe;
 import elec332.core.util.items.tools.basePickaxe;
@@ -42,7 +43,7 @@ public class itemRegist {
     static CreativeTabs Tab = JordTab.JordTab;
     
     public static void Register(FMLPreInitializationEvent event) {
-        new igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "igniter");
+        new Igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "igniter");
         unrefinedCurrency = new baseItem("unrefinedCurrency", Tab, event);
         ultraShard = new baseItem("ultraShard", Tab, event);
         ultraBar = new baseItem("ultraBar", Tab, event);
@@ -71,7 +72,7 @@ public class itemRegist {
         RegisterHelper.registerItem(uberLegs = new uberArmour(UberArmour, 2).setUnlocalizedName("uberLegs").setTextureName(Reference.MODID + ":uberLegs"));
         RegisterHelper.registerItem(uberBoots = new uberArmour(UberArmour, 3).setUnlocalizedName("uberBoots").setTextureName(Reference.MODID + ":uberBoots"));
 
-        uberMixAxe = new uberMixAxe(20, MONEY);
+       // uberMixAxe = new uberMixAxe(20, MONEY);
 
         ultraPick = Pickaxe(ULTRA, "ultraPick", event);
         ultraAxe = Axe(ULTRA, "ultraAxe", event);
