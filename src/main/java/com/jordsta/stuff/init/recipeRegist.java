@@ -1,5 +1,7 @@
 package com.jordsta.stuff.init;
 
+import com.jordsta.stuff.Main;
+import com.jordsta.stuff.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -110,7 +112,7 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(blockRegist.PortalFrame, 2), new Object[]{
                 "SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
         });
-        GameRegistry.addRecipe(new ItemStack(itemRegist.Igniter), new Object[]{
+        GameRegistry.addRecipe(new ItemStack(GameRegistry.findItem(Reference.MODID, "portalIgniter")), new Object[]{
             "NSS","SSS","SS ",'S',itemRegist.superium,'N',Items.nether_star
     });
     }
