@@ -113,7 +113,7 @@ public class recipeRegist {
                 "SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
         });
         GameRegistry.addRecipe(new ItemStack(GameRegistry.findItem(Reference.MODID, "portalIgniter")), new Object[]{
-            "NSS","SSS","SS ",'S',itemRegist.superium,'N',Items.nether_star
+            "NS ","SSS","SD ",'S',itemRegist.superium,'N',Items.nether_star,'D',Items.diamond
     });
     }
 
