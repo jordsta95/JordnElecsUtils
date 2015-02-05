@@ -4,7 +4,6 @@ import com.jordsta.stuff.Main;
 import com.jordsta.stuff.init.blockRegist;
 import elec332.core.api.dimension.IDimAPIProvider;
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.WorldProvider;
 
 /**
@@ -60,6 +59,6 @@ public class DimInfo implements IDimAPIProvider {
      */
     @Override
     public Block getPortalFrameBlock() {
-        return blockRegist.PortalFrame;
+        return blockRegist.horizontalPortal;
     }
 }

@@ -3,13 +3,17 @@ package com.jordsta.stuff.items;
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.init.itemRegist;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.common.ISpecialArmor.ArmorProperties;
 
 public class uberLegs extends ItemArmor implements ISpecialArmor{
 

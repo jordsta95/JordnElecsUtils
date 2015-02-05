@@ -1,34 +1,56 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
-import com.jordsta.stuff.blocks.safetyTorch;
+import com.jordsta.stuff.blocks.*;
+
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.util.blocks.baseblock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockWood;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 
 /**
  * Created by Elec332 on 13-12-2014.
  */
 public class blockRegist {
 
-    public static Block endOre, safetyTorch, dropLight, blankGlass, superiumOre, ultraOre, PortalFrame;
-    static CreativeTabs Tab = JordTab.JordTab;
+    public static Block endOre;
+    public static Block safetyTorch;
+    public static Block dropLight;
+    public static Block blankGlass;
+    public static Block secretStone;
+    public static Block secretDirt;
+    public static Block secretWoodO;
+    public static Block secretWoodB;
+    public static Block secretWoodS;
+    public static Block secretWoodJ;
+    public static Block secretWoodD;
+    public static Block secretWoodA;
+    public static Block secretCobble;
+    public static Block secretGravel;
+    public static Block secretSand;
+    public static Block superiumOre;
+    public static Block ultraOre;
+    public static Block horizontalPortal;
 
     public static void Register(FMLPreInitializationEvent event) {
-        ultraOre = Ore("ultraOre", itemRegist.ultraShard, 2, 20.0F, event);
-        superiumOre = Ore("superiumOre", itemRegist.superium, 10, 16.0F, event);
-        endOre = Ore("endOre", itemRegist.unrefinedCurrency, 20, 20.0F, event);
-        PortalFrame = new baseblock(Material.rock, "PortalFrame", Tab, event, 1).setToolLevel("pickaxe", 20).setHardness(20.0f).setResistance(3.0f);
-        safetyTorch = new safetyTorch();
-        dropLight = new baseblock(Material.sand, "dropLight", Tab, event, 0).setHardness(20.0f).setResistance(3.0f).setStepSound(Block.soundTypeGlass).setLightLevel(1.0F);
-        blankGlass = new baseblock(Material.glass, "blankGlass", Tab, event, 0).setNoOpaqueCube().setHardness(2.0F).setResistance(1.0F);
-    }
+        for (int i = 0; i < BlockWood.field_150096_a.length; i++) {
+            String name = BlockWood.field_150096_a[i];
+            new baseblock(Material.plants, "Ghost" + name, JordTab.JordTab, event, 1).setGhost().setBlockTextureName("minecraft:planks_" + name);
+        }
 
-    static Block Ore(String name, Item itemDropped, int harvestlevel, Float hardness, FMLPreInitializationEvent event){
-        return new baseblock(Material.rock, name, Tab, event, 1).setItemDropped(itemDropped).setToolLevel("pickaxe", harvestlevel).setHardness(hardness).setResistance(3.0F);
+        endOre = new endOre();
+        safetyTorch = new safetyTorch();
+        dropLight = new dropLight();
+        blankGlass = new blankGlass();
+        secretStone = new secretStone();
+        secretCobble = new secretCobble();
+        secretDirt = new secretDirt();
+        secretSand = new secretSand();
+        secretGravel = new secretGravel();
+        superiumOre = new superiumOre();
+        ultraOre = new ultraOre();
+        horizontalPortal = new horizontalPortal();
     }
 }
 

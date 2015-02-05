@@ -14,4 +14,18 @@ public class ultraCoalFuel implements IFuelHandler {
 		return 0;
 		
 	}
+ 
+	
+	/*
+    @Override
+    public int getBurnTime(ItemStack fuel) {
+        if(){
+            return 6000;
+        }else{      
+         
+        return 0;
+        }
+    }
+    */
+ 
 }
