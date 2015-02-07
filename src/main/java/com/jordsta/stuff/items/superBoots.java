@@ -3,9 +3,7 @@ package com.jordsta.stuff.items;
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.init.itemRegist;
-
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 

@@ -1,10 +1,10 @@
 package com.jordsta.stuff.dimensions;
 
 import com.jordsta.stuff.Main;
+import com.jordsta.stuff.init.biomeRegist;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
-import com.jordsta.stuff.init.biomeRegist;
 
 public class JordsUtilsDimension extends WorldProvider{
 
