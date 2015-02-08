@@ -1,8 +1,6 @@
 package com.jordsta.stuff;
 
-
-import java.io.IOException;
-
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
 import com.jordsta.stuff.config.ConfigFile;
@@ -63,7 +61,8 @@ public class Main {
 		DimensionAPI.Register(new DimInfo());
 		
 		//Config
-		config = new Configuration(event.getSuggestedConfigurationFile());
+		this.config = new Configuration(event.getSuggestedConfigurationFile());
+		MinecraftForge.EVENT_BUS.register(this);
 		ConfigFile.syncConfig();
 		
 		//Mod Support
