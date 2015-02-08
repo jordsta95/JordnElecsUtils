@@ -2,7 +2,6 @@ package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.config.ConfigFile;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;

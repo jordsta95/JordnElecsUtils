@@ -1,5 +1,7 @@
 package com.jordsta.stuff.integration.tinkers;
 
+import com.jordsta.stuff.Reference;
+import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -8,9 +10,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-
-import com.jordsta.stuff.Reference;
-import com.jordsta.stuff.helpers.RegisterHelper;
 
 public class ticonRegist {
 

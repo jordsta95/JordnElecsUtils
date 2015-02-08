@@ -2,8 +2,6 @@ package com.jordsta.stuff.config;
 
 import com.jordsta.stuff.Main;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-
 public class ConfigFile {
 
 	public static ConfigFile INSTANCE = new ConfigFile();

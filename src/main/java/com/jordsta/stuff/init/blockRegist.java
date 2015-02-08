@@ -1,21 +1,14 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
-import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.blocks.safetyTorch;
 import com.jordsta.stuff.config.ConfigFile;
-import com.jordsta.stuff.helpers.RegisterHelper;
-
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.util.blocks.baseblock;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
 
 /**
  * Created by Elec332 on 13-12-2014.

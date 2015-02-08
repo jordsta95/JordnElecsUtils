@@ -1,23 +1,11 @@
 package com.jordsta.stuff.world;
 
-import com.jordsta.stuff.Main;
-import com.jordsta.stuff.Main.*;
-import com.jordsta.stuff.init.biomeRegist;
 import com.jordsta.stuff.init.blockRegist;
-
 import cpw.mods.fml.common.IWorldGenerator;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.event.terraingen.OreGenEvent;
-import net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable.EventType;
-import net.minecraftforge.event.terraingen.TerrainGen;
 
 import java.util.Random;
 

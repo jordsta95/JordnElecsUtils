@@ -1,7 +1,6 @@
 package com.jordsta.stuff.config;
 
 import com.jordsta.stuff.Main;
-
 import cpw.mods.fml.client.config.GuiConfig;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;

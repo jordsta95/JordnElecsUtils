@@ -1,9 +1,8 @@
 package com.jordsta.stuff;
 
 import com.jordsta.stuff.init.itemRegist;
-
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
+import net.minecraft.item.ItemStack;
 
 public class ultraCoalFuel implements IFuelHandler {
 

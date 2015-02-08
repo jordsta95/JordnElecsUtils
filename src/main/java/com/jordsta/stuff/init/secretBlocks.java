@@ -1,7 +1,6 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
-
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;

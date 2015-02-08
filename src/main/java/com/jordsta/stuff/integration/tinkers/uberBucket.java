@@ -2,8 +2,6 @@ package com.jordsta.stuff.integration.tinkers;
 
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
-
-import com.jordsta.stuff.integration.tinkers.ticonRegist;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBucket;
 

@@ -7,7 +7,6 @@ import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
-
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.api.dimension.Igniter;
 import elec332.core.util.items.baseItem;
