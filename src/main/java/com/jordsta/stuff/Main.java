@@ -49,13 +49,12 @@ public class Main {
     	GameRegistry.registerWorldGenerator(new superiumOreGen(), 1);
     	GameRegistry.registerWorldGenerator(new ultraGen(), 0);
 
+		//Register items
+		itemRegist.Register(event);
 
     	//Register Blocks
 		blockRegist.Register(event);
 		secretBlocks.Register(event);
-
-		//Register items
-		itemRegist.Register(event);
 
 		//Recipes
 		recipeRegist.Register();
