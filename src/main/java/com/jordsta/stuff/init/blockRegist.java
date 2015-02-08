@@ -35,26 +35,26 @@ public class blockRegist {
   
 
     public static void Register(FMLPreInitializationEvent event) {
-    	if(!ConfigFile.disableUltradianVar){
         //Ultradian
+        if(!ConfigFile.disableUltradian){
     		ultraOre = Ore("ultraOre", itemRegist.ultraShard, 2, 20.0F, event);
     	}
-    	
-    	if(!ConfigFile.disableSuperiumVar){
-    		if(!ConfigFile.disableUltradianVar){
-    	//Superium
-        superiumOre = Ore("superiumOre", itemRegist.superium, 10, 16.0F, event);
-    		} else
-        superiumOre = Ore("superiumOre", itemRegist.superium, 3, 16.0F, event);
+
+        //Superium
+    	if(!ConfigFile.disableSuperium){
+    		if(!ConfigFile.disableUltradian)
+                superiumOre = Ore("superiumOre", itemRegist.superium, 10, 16.0F, event);
+    		else
+                superiumOre = Ore("superiumOre", itemRegist.superium, 3, 16.0F, event);
     	}
-        
-    	if(!ConfigFile.disableUberiumVar){
-    		if(!ConfigFile.disableSuperiumVar){		
+
         //Uberium
-        endOre = Ore("endOre", itemRegist.unrefinedCurrency, 20, 20.0F, event);
-        PortalFrame = new baseblock(Material.rock, "PortalFrame", Tab, event, 1).setToolLevel("pickaxe", 20).setHardness(20.0f).setResistance(3.0f);
-    	}
-    		else if(!ConfigFile.disableUltradianVar){
+    	if(!ConfigFile.disableUberium){
+    		if(!ConfigFile.disableSuperium){
+                endOre = Ore("endOre", itemRegist.unrefinedCurrency, 20, 20.0F, event);
+                PortalFrame = new baseblock(Material.rock, "PortalFrame", Tab, event, 1).setToolLevel("pickaxe", 20).setHardness(20.0f).setResistance(3.0f);
+    	    }
+    		else if(!ConfigFile.disableUltradian){
     	        endOre = Ore("endOre", itemRegist.unrefinedCurrency, 3, 20.0F, event);
     	        PortalFrame = new baseblock(Material.rock, "PortalFrame", Tab, event, 1).setToolLevel("pickaxe", 3).setHardness(20.0f).setResistance(3.0f);
     		}
