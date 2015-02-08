@@ -38,6 +38,12 @@ public class Main {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
+
+		//Config
+		this.config = new Configuration(event.getSuggestedConfigurationFile());
+		MinecraftForge.EVENT_BUS.register(this);
+		ConfigFile.INSTANCE.syncConfig();
+
     	//World gen
     	GameRegistry.registerWorldGenerator(new endOreGen(), -1);
     	GameRegistry.registerWorldGenerator(new superiumOreGen(), 1);
@@ -60,11 +66,6 @@ public class Main {
 		//Register with DimensionAPI
 		DimensionAPI.Register(new DimInfo());
 		
-		//Config
-		this.config = new Configuration(event.getSuggestedConfigurationFile());
-		MinecraftForge.EVENT_BUS.register(this);
-		ConfigFile.syncConfig();
-		
 		//Mod Support
 		if(Loader.isModLoaded("COFHCore")){
 			
@@ -78,9 +79,7 @@ public class Main {
     @SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event){
     	if(event.modID.equals(Reference.MODID)){
-    		ConfigFile.syncConfig();
-    		
-    		FMLCommonHandler.instance().bus().register(instance);
+    		ConfigFile.INSTANCE.syncConfig();
     	}
     }
     

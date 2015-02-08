@@ -47,53 +47,53 @@ public class itemRegist {
     /*Post 0.7 from here on out. THIS WILL BE MESSY. No, I won't clean it up unless I see fit
     Also, I will not accept pull requests that only change this code!
       */
-    
   
     
     public static void Register(FMLPreInitializationEvent event) {
         new Igniter(JordTab.JordTab, Main.dimensionID, "portalIgniter").setTextureName(Reference.MODID + ":" + "igniter");
 
          lightDust = new baseItem("lightDust", Tab, event);
-        
-        if(!ConfigFile.disableUltradianVar){
-        //Ultradian        
-        ultraShard = new baseItem("ultraShard", Tab, event);
-        ultraBar = new baseItem("ultraBar", Tab, event);    
-        ultraCoal = new baseItem("ultraCoal", Tab, event);
-        if(!ConfigFile.disableSuperiumVar){
-        ultraPick = Pickaxe(ULTRA, "ultraPick", event);
-        }else ultraPick = Pickaxe(SUPER, "ultraPick", event);
-        ultraAxe = Axe(ULTRA, "ultraAxe", event);
-        ultraShovel = Shovel(ULTRA, "ultraShovel", event);
-        ultraSword = Sword(ULTRA2, "ultraSword", event);
+
+        //Ultradian
+        if(!ConfigFile.disableUltradian){
+            ultraShard = new baseItem("ultraShard", Tab, event);
+            ultraBar = new baseItem("ultraBar", Tab, event);
+            ultraCoal = new baseItem("ultraCoal", Tab, event);
+            if(!ConfigFile.disableSuperium)
+                ultraPick = Pickaxe(ULTRA, "ultraPick", event);
+            else
+                ultraPick = Pickaxe(SUPER, "ultraPick", event);
+            ultraAxe = Axe(ULTRA, "ultraAxe", event);
+            ultraShovel = Shovel(ULTRA, "ultraShovel", event);
+            ultraSword = Sword(ULTRA2, "ultraSword", event);
         }
-        
-        if(!ConfigFile.disableSuperiumVar){
+
         //Superium
-        superium = new baseItem("superium", Tab, event);
-        superPick = Pickaxe(SUPER, "superPick", event);
-        superAxe = Axe(SUPER, "superAxe", event);
-        superShovel = Shovel(SUPER, "superShovel", event);
-        superSword = Sword(SUPER2, "superSword", event);
-        RegisterHelper.registerItem(superChest = new superArmour(SuperArmour, 1).setUnlocalizedName("superChest").setTextureName(Reference.MODID + ":superChest"));
-        RegisterHelper.registerItem(superHelmet = new superArmour(SuperArmour, 0).setUnlocalizedName("superHelmet").setTextureName(Reference.MODID + ":superHelmet"));
-        RegisterHelper.registerItem(superLegs = new superArmour(SuperArmour, 2).setUnlocalizedName("superLegs").setTextureName(Reference.MODID + ":superLegs"));
-        RegisterHelper.registerItem(superBoots = new superArmour(SuperArmour, 3).setUnlocalizedName("superBoots").setTextureName(Reference.MODID + ":superBoots"));
+        if(!ConfigFile.disableSuperium){
+            superium = new baseItem("superium", Tab, event);
+            superPick = Pickaxe(SUPER, "superPick", event);
+            superAxe = Axe(SUPER, "superAxe", event);
+            superShovel = Shovel(SUPER, "superShovel", event);
+            superSword = Sword(SUPER2, "superSword", event);
+            RegisterHelper.registerItem(superChest = new superArmour(SuperArmour, 1).setUnlocalizedName("superChest").setTextureName(Reference.MODID + ":superChest"));
+            RegisterHelper.registerItem(superHelmet = new superArmour(SuperArmour, 0).setUnlocalizedName("superHelmet").setTextureName(Reference.MODID + ":superHelmet"));
+            RegisterHelper.registerItem(superLegs = new superArmour(SuperArmour, 2).setUnlocalizedName("superLegs").setTextureName(Reference.MODID + ":superLegs"));
+            RegisterHelper.registerItem(superBoots = new superArmour(SuperArmour, 3).setUnlocalizedName("superBoots").setTextureName(Reference.MODID + ":superBoots"));
         }
-        
-        if(!ConfigFile.disableUberiumVar){
+
         //Uberium
-        diamondRod = new baseItem("diamondRod", Tab, event);
-        unrefinedCurrency = new baseItem("unrefinedCurrency", Tab, event);
-        moneyPick = Pickaxe(MONEY, "moneyPick", event);
-        moneyAxe = Axe(MONEY, "moneyAxe", event);
-        moneyShovel = Shovel(MONEY, "moneyShovel", event);
-        moneyBlade = Sword(MONEY2, "moneyBlade", event);
-        RegisterHelper.registerItem(uberChest = new uberArmour(UberArmour, 1).setUnlocalizedName("uberChest").setTextureName(Reference.MODID + ":uberChest"));
-        RegisterHelper.registerItem(uberHelmet = new uberArmour(UberArmour, 0).setUnlocalizedName("uberHelmet").setTextureName(Reference.MODID + ":uberHelmet"));
-        RegisterHelper.registerItem(uberLegs = new uberArmour(UberArmour, 2).setUnlocalizedName("uberLegs").setTextureName(Reference.MODID + ":uberLegs"));
-        RegisterHelper.registerItem(uberBoots = new uberArmour(UberArmour, 3).setUnlocalizedName("uberBoots").setTextureName(Reference.MODID + ":uberBoots"));
-        // uberMixAxe = new uberMixAxe(20, MONEY); -- We don't talk about this!
+        if(!ConfigFile.disableUberium){
+            diamondRod = new baseItem("diamondRod", Tab, event);
+            unrefinedCurrency = new baseItem("unrefinedCurrency", Tab, event);
+            moneyPick = Pickaxe(MONEY, "moneyPick", event);
+            moneyAxe = Axe(MONEY, "moneyAxe", event);
+            moneyShovel = Shovel(MONEY, "moneyShovel", event);
+            moneyBlade = Sword(MONEY2, "moneyBlade", event);
+            RegisterHelper.registerItem(uberChest = new uberArmour(UberArmour, 1).setUnlocalizedName("uberChest").setTextureName(Reference.MODID + ":uberChest"));
+            RegisterHelper.registerItem(uberHelmet = new uberArmour(UberArmour, 0).setUnlocalizedName("uberHelmet").setTextureName(Reference.MODID + ":uberHelmet"));
+            RegisterHelper.registerItem(uberLegs = new uberArmour(UberArmour, 2).setUnlocalizedName("uberLegs").setTextureName(Reference.MODID + ":uberLegs"));
+            RegisterHelper.registerItem(uberBoots = new uberArmour(UberArmour, 3).setUnlocalizedName("uberBoots").setTextureName(Reference.MODID + ":uberBoots"));
+            //uberMixAxe = new uberMixAxe(20, MONEY); -- We don't talk about this!
         }
         
         
@@ -101,10 +101,6 @@ public class itemRegist {
         /*Post 0.7 from here on out. THIS WILL BE MESSY. No, I won't clean it up unless I see fit
         Also, I will not accept pull requests that only change this code!
           */
-
-        
-
-       
 
 
     }
