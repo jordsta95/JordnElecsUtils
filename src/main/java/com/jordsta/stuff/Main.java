@@ -1,5 +1,6 @@
 package com.jordsta.stuff;
 
+import com.jordsta.stuff.integration.tinkers.ticonRegist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
@@ -12,7 +13,6 @@ import com.jordsta.stuff.world.superiumOreGen;
 import com.jordsta.stuff.world.ultraGen;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;

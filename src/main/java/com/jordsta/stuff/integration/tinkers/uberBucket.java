@@ -1,10 +1,10 @@
-package com.jordsta.stuff.init;
+package com.jordsta.stuff.integration.tinkers;
 
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 
+import com.jordsta.stuff.integration.tinkers.ticonRegist;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
 
 public class uberBucket extends ItemBucket {
@@ -15,7 +15,6 @@ public class uberBucket extends ItemBucket {
 		setUnlocalizedName("uberBucket");
 		setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
 		setCreativeTab(JordTab.JordTab);
-		
 	}
 
 }

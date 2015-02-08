@@ -1,6 +1,4 @@
-package com.jordsta.stuff.init;
-
-import java.io.IOException;
+package com.jordsta.stuff.integration.tinkers;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -13,8 +11,6 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.helpers.RegisterHelper;
-
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ticonRegist {
 

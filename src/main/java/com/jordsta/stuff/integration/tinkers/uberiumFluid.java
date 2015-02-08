@@ -1,4 +1,4 @@
-package com.jordsta.stuff.init;
+package com.jordsta.stuff.integration.tinkers;
 
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
