@@ -1,5 +1,6 @@
 package com.jordsta.stuff;
 
+import com.jordsta.stuff.init.blockRegist;
 import com.jordsta.stuff.init.itemRegist;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,7 +16,7 @@ public class JordTab {
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem()
         {
-            return itemRegist.moneyPick;
+            return itemRegist.moneyPick != null ? itemRegist.moneyPick : Item.getItemFromBlock(blockRegist.dropLight);
         }
     };
 }
