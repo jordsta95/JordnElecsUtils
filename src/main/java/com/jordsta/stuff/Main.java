@@ -67,9 +67,9 @@ public class Main {
 		if(Loader.isModLoaded("COFHCore")){
 			
 		}
-		
+		ticonRegist.Register();
 		if(Loader.isModLoaded("TCon")){
-			ticonRegist.Register();
+			
 		}
     }
     
