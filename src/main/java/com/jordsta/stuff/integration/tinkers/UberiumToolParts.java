@@ -80,8 +80,9 @@ public void registerIcons(IIconRegister iconRegister){
 		texture[i] = iconRegister.registerIcon(Reference.MODID + ":" + "Uberium_" + uberParts[i]);
 	}
 }
+@Override
 @SideOnly(Side.CLIENT)
-public void getuberParts(Item item, CreativeTabs creativeTabs, List list){
+public void getSubItems(Item item, CreativeTabs creativeTabs, List list){
 	for (int i = 0; i < uberParts.length; i++){
 		list.add(new ItemStack(item, 1, i));
 	}
