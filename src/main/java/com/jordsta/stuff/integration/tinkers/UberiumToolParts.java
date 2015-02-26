@@ -1,17 +1,17 @@
 package com.jordsta.stuff.integration.tinkers;
 
-import java.util.List;
-
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import elec332.core.helper.RegisterHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+
+import java.util.List;
 
 public class UberiumToolParts extends Item
 {
@@ -65,32 +65,36 @@ public class UberiumToolParts extends Item
 		"shovel_handle","shovel_head","shovel_head_broken"
 	};
 	
-protected UberiumToolParts(){
-	super();
-	this.setCreativeTab(JordTab.JordTab);
-	this.setHasSubtypes(true);
-	
-}
-
-@SideOnly(Side.CLIENT)
-public void registerIcons(IIconRegister iconRegister){
-	texture = new IIcon[uberParts.length];
-	
-	for(int i = 0; i < uberParts.length; i++){
-		texture[i] = iconRegister.registerIcon(Reference.MODID + ":" + "Uberium_" + uberParts[i]);
+	protected UberiumToolParts(){
+		super();
+		this.setCreativeTab(JordTab.JordTab);
+		this.setHasSubtypes(true);
+		RegisterHelper.registerItem(this, "UberiumPart");
 	}
-}
-@Override
-@SideOnly(Side.CLIENT)
-public void getSubItems(Item item, CreativeTabs creativeTabs, List list){
-	for (int i = 0; i < uberParts.length; i++){
-		list.add(new ItemStack(item, 1, i));
-	}
-}
 
-@SideOnly(Side.CLIENT)
-public IIcon getIcon(int side, int meta){
-	return texture[meta];
-}
-	
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return "item."+Reference.MODID+"."+uberParts[stack.getItemDamage()];
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister iconRegister){
+		texture = new IIcon[uberParts.length];
+		for(int i = 0; i < uberParts.length; i++){
+			texture[i] = iconRegister.registerIcon(Reference.MODID + ":" + "Uberium_" + uberParts[i]);
+		}
+	}
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubItems(Item item, CreativeTabs creativeTabs, List list){
+		for (int i = 0; i < uberParts.length; i++){
+			list.add(new ItemStack(item, 1, i));
+		}
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIconFromDamage(int meta) {
+		return texture[meta];
+	}
 }

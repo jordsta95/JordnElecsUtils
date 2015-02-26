@@ -1,21 +1,14 @@
 package com.jordsta.stuff.integration.tinkers;
 
-import java.io.IOException;
-
+import com.jordsta.stuff.Reference;
+import com.jordsta.stuff.helpers.RegisterHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLiquid;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-
-import com.jordsta.stuff.Reference;
-import com.jordsta.stuff.helpers.RegisterHelper;
-
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ticonRegist {
 
@@ -29,10 +22,8 @@ public class ticonRegist {
      TiCon Item textures added as Uberium_<part>. E.g. Uberium_battleaxe_back... These will need to be meta
      */
     
-    
 	
 	public static void Register(){
-		
 		
         //Fluid Uberium
         fluidUberium = new Fluid("Uberium");
@@ -43,10 +34,6 @@ public class ticonRegist {
         
         //Uberium TiCon Tools
         UberiumToolParts = new UberiumToolParts()/*.setTextureName("Uberium")*/;
-        GameRegistry.registerItem(UberiumToolParts, "UberiumToolParts", UberiumToolParts.getUnlocalizedName().substring(5));
-
-        
 	}
-	
 }
 

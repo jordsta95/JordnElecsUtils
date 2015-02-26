@@ -1,14 +1,13 @@
 package com.jordsta.stuff.init;
 
 
-import java.util.Random;
-
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+
+import java.util.Random;
 
 public class JordBlock extends Block{
 

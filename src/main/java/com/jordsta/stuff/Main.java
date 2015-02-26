@@ -20,6 +20,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import elec332.core.api.dimension.DimensionAPI;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+import org.apache.logging.log4j.Logger;
 
 
 @Mod(modid = Reference.MODID, version = Reference.VERSION/*, dependencies = "required-after:ElecCore@[52,"*/)
@@ -31,6 +32,7 @@ public class Main {
 	public static final int dimensionID = 24;
 	
 	public static Configuration config;
+	public static Logger logger;
 	@Mod.Instance(Reference.MODID)
 	public static Main instance;
 
@@ -38,7 +40,8 @@ public class Main {
     public void preInit(FMLPreInitializationEvent event){
 
 		//Config
-		this.config = new Configuration(event.getSuggestedConfigurationFile());
+		config = new Configuration(event.getSuggestedConfigurationFile());
+		logger = event.getModLog();
 		MinecraftForge.EVENT_BUS.register(this);
 		ConfigFile.INSTANCE.syncConfig();
 
@@ -67,9 +70,10 @@ public class Main {
 		if(Loader.isModLoaded("COFHCore")){
 			
 		}
-		ticonRegist.Register();
-		if(Loader.isModLoaded("TCon")){
-			
+
+		if(Loader.isModLoaded("TConstruct")){
+			logger.info("Loading Tinkers' integration");
+			ticonRegist.Register();
 		}
     }
     
