@@ -46,7 +46,7 @@ public class UberiumToolParts extends Item
 		//Hammer
 		"hammer_back","hammer_front","hammer_handle","hammer_handle_broken","hammer_head",
 		//longsword
-		"longsword_accesory","longsword_blade","longsowrd_blade_broken","longsword_handle",
+		"longsword_accessory","longsword_blade","longsword_blade_broken","longsword_handle",
 		//Lumberaxe
 		"lumberaxe_binding","lumberaxe_handle","lumberaxe_head","lumberaxe_head_broken","lumberaxe_shield",
 		//mattock
@@ -58,9 +58,9 @@ public class UberiumToolParts extends Item
 		//rapier
 		"rapier_accessory","rapier_blade","rapier_blade_broken","rapier_handle",
 		//Sycthe
-		"scythe_accessory","scythe_binding","sycthe_handle","scythe_head","scythe_head_broken",
+		"scythe_accessory","scythe_binding","scythe_handle","scythe_head","scythe_head_broken",
 		//Shortbow
-		"bow_bottom","bow_bottom_1","bow_bottom_2","bow_bottom_3","bow_top","bot_top_1","bow_top_2","bow_top_3",
+		"bow_bottom","bow_bottom_1","bow_bottom_2","bow_bottom_3","bow_top","bow_top_1","bow_top_2","bow_top_3",
 		//shovel
 		"shovel_handle","shovel_head","shovel_head_broken"
 	};

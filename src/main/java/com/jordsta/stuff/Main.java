@@ -44,6 +44,9 @@ public class Main {
 		logger = event.getModLog();
 		MinecraftForge.EVENT_BUS.register(this);
 		ConfigFile.INSTANCE.syncConfig();
+		
+		//Cake Break
+	    MinecraftForge.EVENT_BUS.register(new cakeBreak());
 
     	//World gen
     	GameRegistry.registerWorldGenerator(new endOreGen(), -1);
@@ -65,7 +68,7 @@ public class Main {
 
 		//Register with DimensionAPI
 		DimensionAPI.Register(new DimInfo());
-		
+		ticonRegist.Register();
 		//Mod Support
 		if(Loader.isModLoaded("COFHCore")){
 			
@@ -73,7 +76,7 @@ public class Main {
 
 		if(Loader.isModLoaded("TConstruct")){
 			logger.info("Loading Tinkers' integration");
-			ticonRegist.Register();
+			
 		}
     }
     
@@ -83,6 +86,8 @@ public class Main {
     		ConfigFile.INSTANCE.syncConfig();
     	}
     }
+    
+
     
     
     @EventHandler

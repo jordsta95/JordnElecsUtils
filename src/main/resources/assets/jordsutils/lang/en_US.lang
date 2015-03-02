@@ -50,4 +50,18 @@ item.jordsutils.ultraSword.name=Ultradian Sword
 item.jordsutils.ultraShovel.name=Ultradian Shovel
 item.jordsutils.ultraAxe.name=Ultradian Axe
 item.portalIgniter.name=Deltarian Inginiter
+item.cakeSword.name=God Sword
+
+item.jordsutils.jordsutils.arrow_head.name=Uberium Arrow Head
+item..jordsutils.arrow_shaft.name=Uberium Arrow Shaft
+item..jordsutils.axe_handle.name=Uberium Handle
+item..jordsutils.axe_head.name=Uberium Axe Head
+item..jordsutils.battlesign_head.name=Uberium Battlesign Head
+item..jordsutils.sword_blade.name=Uberium Sword Blade
+item..jordsutils.chisel_head.name=Uberium Chisel Head
+item..jordsutils.dagger_blade.name=Dagger Blade
+item..jordsutils.frypan_head.name=Uberium Frying Pan Head
+item..jordsutils.mattock_handle.name=Uberium Tool Rod
+item..jordsutils.shovel_head.name=Shovel Head
+item..jordsutils.pickaxe_head.name=Uberium Pickaxe Head
 

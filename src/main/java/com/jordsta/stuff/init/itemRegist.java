@@ -5,8 +5,10 @@ import com.jordsta.stuff.Main;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
+import com.jordsta.stuff.items.cakeSword;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
+
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.api.dimension.Igniter;
 import elec332.core.util.items.baseItem;
@@ -30,6 +32,7 @@ public class itemRegist {
     public static final Item.ToolMaterial SUPER2 = EnumHelper.addToolMaterial("SUPER2", 7, 2000, 75.0F, 36.0F, 25);
     public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 2.0F, 90);
     public static final Item.ToolMaterial ULTRA2 = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 24.0F, 90);
+    public static final Item.ToolMaterial CAKE = EnumHelper.addToolMaterial("CAKE", 2, 12, 50.0F, 3.0F, 999);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
@@ -46,6 +49,7 @@ public class itemRegist {
     /*Post 0.7 from here on out. THIS WILL BE MESSY. No, I won't clean it up unless I see fit
     Also, I will not accept pull requests that only change this code!
       */
+    public static Item cakeSword;
   
     
     public static void Register(FMLPreInitializationEvent event) {
@@ -100,7 +104,10 @@ public class itemRegist {
         /*Post 0.7 from here on out. THIS WILL BE MESSY. No, I won't clean it up unless I see fit
         Also, I will not accept pull requests that only change this code!
           */
-
+        
+        if(!ConfigFile.happyVazkii){
+        cakeSword = new cakeSword(1, CAKE);
+        }
 
     }
 
