@@ -6,6 +6,7 @@ import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.cakeSword;
+import com.jordsta.stuff.items.cakeSword1;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
 
@@ -33,6 +34,7 @@ public class itemRegist {
     public static final Item.ToolMaterial ULTRA = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 2.0F, 90);
     public static final Item.ToolMaterial ULTRA2 = EnumHelper.addToolMaterial("ULTRA", 12, 624, 50.0F, 24.0F, 90);
     public static final Item.ToolMaterial CAKE = EnumHelper.addToolMaterial("CAKE", 2, 12, 50.0F, 3.0F, 999);
+    public static final Item.ToolMaterial CAKE1 = EnumHelper.addToolMaterial("CAKE1", 2, 200, 50.0F, 3.0F, 999);
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
@@ -106,8 +108,12 @@ public class itemRegist {
           */
         
         if(!ConfigFile.happyVazkii){
+        	if(!ConfigFile.InfiCake){
         cakeSword = new cakeSword(1, CAKE);
+        	}
+        cakeSword = new cakeSword1(1, CAKE);
         }
+        
 
     }
 

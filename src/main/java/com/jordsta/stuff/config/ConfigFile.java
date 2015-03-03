@@ -21,6 +21,10 @@ public class ConfigFile {
 	//Cake
 	public static boolean happyVazkii;
 	public static final boolean happyVazkiiVar = false;
+	//InfiCake
+	public static boolean InfiCake;
+	public static final boolean InfiCakeVar = false;
+	
 	
 	
 	public void syncConfig(){
@@ -52,6 +56,14 @@ public class ConfigFile {
 		final String CAKE = Main.config.CATEGORY_GENERAL + Main.config.CATEGORY_SPLITTER + "Mod Interaction";
 		Main.config.addCustomCategoryComment(CAKE, "Disable mod interaction exploits, and other stuff, here");
 		this.happyVazkii = Main.config.get(CAKE, "I like making Vazkii happy", happyVazkiiVar).getBoolean(happyVazkiiVar);
+		if(Main.config.hasChanged()){
+			Main.config.save();
+		}
+		
+		//Disable Inficake
+		final String INFICAKE = Main.config.CATEGORY_GENERAL + Main.config.CATEGORY_SPLITTER + "Mod Interaction";
+		Main.config.addCustomCategoryComment(INFICAKE, "Disable mod interaction exploits, and other stuff, here");
+		this.InfiCake = Main.config.get(INFICAKE, "I am a monster", InfiCakeVar).getBoolean(InfiCakeVar);
 		if(Main.config.hasChanged()){
 			Main.config.save();
 		}

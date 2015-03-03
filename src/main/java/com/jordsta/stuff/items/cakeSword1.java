@@ -14,9 +14,9 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class cakeSword extends ItemSword {
+public class cakeSword1 extends ItemSword {
 
-	public cakeSword(int i, ToolMaterial mat) {
+	public cakeSword1(int i, ToolMaterial mat) {
 		super(mat);
      	setUnlocalizedName("cakeSword");
  		setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
@@ -30,7 +30,7 @@ public class cakeSword extends ItemSword {
         if (world.getBlock(x, y + 1, z) == Blocks.air)
         {
               world.setBlock(x, y + 1, z, Blocks.cake);
-              
+              itemStack.damageItem(2, player);
               
               
               return true;
