@@ -1,4 +1,4 @@
-package com.jordsta.stuff;
+package com.jordsta.stuff.handler;
 
 import com.jordsta.stuff.init.itemRegist;
 
@@ -8,7 +8,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class cakeBreak {
+public class CakeBreak {
 	@SubscribeEvent
 	public void onBlockBreak(BlockEvent.BreakEvent event) {
 		if(event.block==net.minecraft.init.Blocks.cake) {

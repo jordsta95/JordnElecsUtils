@@ -1,10 +1,10 @@
-package com.jordsta.stuff;
+package com.jordsta.stuff.handler;
 
 import com.jordsta.stuff.init.itemRegist;
 import cpw.mods.fml.common.IFuelHandler;
 import net.minecraft.item.ItemStack;
 
-public class ultraCoalFuel implements IFuelHandler {
+public class UltraCoalFuelHandler implements IFuelHandler {
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
