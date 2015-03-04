@@ -109,12 +109,10 @@ public class itemRegist {
         
         if(!ConfigFile.happyVazkii){
         	if(!ConfigFile.InfiCake){
-        cakeSword = new cakeSword(1, CAKE);
+                cakeSword = new cakeSword(1, CAKE);
         	}
-        cakeSword = new cakeSword1(1, CAKE);
+            cakeSword = new cakeSword1(1, CAKE);
         }
-        
-
     }
 
     static Item Axe(Item.ToolMaterial material, String name, FMLPreInitializationEvent event){
