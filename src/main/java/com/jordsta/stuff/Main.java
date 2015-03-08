@@ -2,8 +2,6 @@ package com.jordsta.stuff;
 
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.dimensions.DimInfo;
-import com.jordsta.stuff.handler.CakeBreak;
-import com.jordsta.stuff.handler.UltraCoalFuelHandler;
 import com.jordsta.stuff.init.*;
 import com.jordsta.stuff.integration.tinkers.ticonRegist;
 import com.jordsta.stuff.proxies.CommonProxy;
@@ -48,7 +46,7 @@ public class Main {
 		ConfigFile.INSTANCE.syncConfig();
 		
 		//Cake Break
-	    MinecraftForge.EVENT_BUS.register(new CakeBreak());
+	    MinecraftForge.EVENT_BUS.register(new cakeBreak());
 
     	//World gen
     	GameRegistry.registerWorldGenerator(new endOreGen(), -1);
@@ -97,6 +95,6 @@ public class Main {
     	proxy.registerTileEntities();
     	
     	//Fuel Handler
-    	GameRegistry.registerFuelHandler(new UltraCoalFuelHandler());
+    	GameRegistry.registerFuelHandler(new ultraCoalFuel());
     }
 }

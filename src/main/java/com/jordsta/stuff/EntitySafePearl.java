@@ -28,9 +28,9 @@ public class EntitySafePearl extends EntityThrowable
         super(par1World, par2, par4, par6);
     }
  
-    /**
-     * Called when this EntityThrowable hits a block or entity.
-     */
+    
+      //Called when this EntityThrowable hits a block or entity.
+     
     protected void onImpact(MovingObjectPosition par1MovingObjectPosition)
     {
         if (par1MovingObjectPosition.entityHit != null)
@@ -49,7 +49,8 @@ public class EntitySafePearl extends EntityThrowable
             {
                 EntityPlayerMP var3 = (EntityPlayerMP)this.getThrower();
  
-                if (!var3.playerNetServerHandler.connectionClosed && var3.worldObj == this.worldObj)
+                //if (!var3.playerNetServerHandler.connectionClosed && var3.worldObj == this.worldObj)
+                if (var3.playerNetServerHandler.func_147362_b().isChannelOpen() && var3.worldObj == this.worldObj)
                 {
                     this.getThrower().setPositionAndUpdate(this.posX, this.posY, this.posZ);
                     this.getThrower().fallDistance = 0.0F;

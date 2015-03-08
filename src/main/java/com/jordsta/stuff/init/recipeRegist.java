@@ -122,6 +122,12 @@ public class recipeRegist {
         });
         
         
+        GameRegistry.addRecipe(new ItemStack(itemRegist.regenArmour), new Object[]{
+            "GGG","G G","GGG",'G',Items.golden_apple
+    });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.safePearlRod), new Object[]{
+            " IE"," DI","G G",'I',Items.ender_eye,'E',Items.ender_pearl,'G',Items.ghast_tear
+    });
         
         
         if(!ConfigFile.disableSuperium)

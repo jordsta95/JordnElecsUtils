@@ -1,10 +1,14 @@
 package com.jordsta.stuff.items;
 
+import java.util.List;
+
 import com.jordsta.stuff.JordTab;
 import com.jordsta.stuff.Reference;
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -18,7 +22,7 @@ public class cakeSword1 extends ItemSword {
 
 	public cakeSword1(int i, ToolMaterial mat) {
 		super(mat);
-     	setUnlocalizedName("cakeSword");
+     	setUnlocalizedName("cakeSword1");
  		setTextureName(Reference.MODID + ":" + getUnlocalizedName().substring(5));
  		setCreativeTab(JordTab.JordTab);
         RegisterHelper.registerItem(this);
@@ -40,6 +44,10 @@ public class cakeSword1 extends ItemSword {
 
 
 
-
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    {
+        par3List.add("Placing cake will use durability");
+    }
 
 }

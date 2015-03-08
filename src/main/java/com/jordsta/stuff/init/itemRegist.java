@@ -7,9 +7,12 @@ import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.cakeSword;
 import com.jordsta.stuff.items.cakeSword1;
+import com.jordsta.stuff.items.regenArmour;
+import com.jordsta.stuff.items.safePearlRod;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.api.dimension.Igniter;
 import elec332.core.util.items.baseItem;
@@ -38,6 +41,7 @@ public class itemRegist {
     
     public static ArmorMaterial SuperArmour = EnumHelper.addArmorMaterial("SuperArmour", 45, new int[]{3, 8, 6, 3}, 64);
     public static ArmorMaterial UberArmour = EnumHelper.addArmorMaterial("UberArmour", 45, new int[]{300, 800, 600, 300}, 64);
+    public static ArmorMaterial RegenArmour = EnumHelper.addArmorMaterial("RegenArmour", 1, new int[]{1, 1, 1, 1}, 1);
     
     public static Item unrefinedCurrency, lightDust, diamondRod;
     public static Item moneyPick, moneyAxe, moneyShovel, moneyBlade;
@@ -52,6 +56,9 @@ public class itemRegist {
     Also, I will not accept pull requests that only change this code!
       */
     public static Item cakeSword;
+    public static Item regenArmour;
+    public static Item regenArmour1;
+    public static Item safePearlRod;
   
     
     public static void Register(FMLPreInitializationEvent event) {
@@ -108,12 +115,25 @@ public class itemRegist {
           */
         
         if(!ConfigFile.happyVazkii){
-        	if(!ConfigFile.InfiCake){
-                cakeSword = new cakeSword(1, CAKE);
-        	}
-            cakeSword = new cakeSword1(1, CAKE);
+        	if(!ConfigFile.InfiCake)
+        cakeSword = new cakeSword(1, CAKE);
+        	 else
+        cakeSword = new cakeSword1(1, CAKE1);
         }
+        
+        
+    if(Loader.isModLoaded("AWWayofTime")){
+    	RegisterHelper.registerItem(regenArmour = new regenArmour(RegenArmour, 1).setUnlocalizedName("regenChest").setTextureName(Reference.MODID + ":regenChest"));}	
+    	else{
+    RegisterHelper.registerItem(regenArmour1 = new regenArmour(RegenArmour, 2).setUnlocalizedName("regenLegs").setTextureName(Reference.MODID + ":regenLegs"));
     }
+    
+    	safePearlRod = new safePearlRod();
+    
+    
+    }
+    
+
 
     static Item Axe(Item.ToolMaterial material, String name, FMLPreInitializationEvent event){
         return new baseAxe(material, name, Tab, event);

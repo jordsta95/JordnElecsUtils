@@ -51,6 +51,10 @@ item.jordsutils.ultraShovel.name=Ultradian Shovel
 item.jordsutils.ultraAxe.name=Ultradian Axe
 item.portalIgniter.name=Deltarian Inginiter
 item.cakeSword.name=God Sword
+item.cakeSword1.name=Demi-God Sword
+item.regenLegs.name=Regeneration Leggings
+item.regenChest.name=Regeneration Armour
+item.safePearlRod.name=Ender Rod
 
 item.jordsutils.jordsutils.arrow_head.name=Uberium Arrow Head
 item..jordsutils.arrow_shaft.name=Uberium Arrow Shaft
