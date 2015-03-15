@@ -8,6 +8,7 @@ import com.jordsta.stuff.proxies.CommonProxy;
 import com.jordsta.stuff.world.endOreGen;
 import com.jordsta.stuff.world.superiumOreGen;
 import com.jordsta.stuff.world.ultraGen;
+
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -20,6 +21,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import elec332.core.api.dimension.DimensionAPI;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+
 import org.apache.logging.log4j.Logger;
 
 

@@ -2,6 +2,7 @@ package com.jordsta.stuff.dimensions;
 
 import com.jordsta.stuff.Main;
 import com.jordsta.stuff.init.blockRegist;
+
 import elec332.core.api.dimension.IDimAPIProvider;
 import net.minecraft.block.Block;
 import net.minecraft.world.WorldProvider;

@@ -1,6 +1,7 @@
 package com.jordsta.stuff.world;
 
 import com.jordsta.stuff.init.blockRegist;
+
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;

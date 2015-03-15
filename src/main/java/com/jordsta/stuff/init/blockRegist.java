@@ -1,8 +1,11 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
+import com.jordsta.stuff.blocks.doubler;
 import com.jordsta.stuff.blocks.safetyTorch;
 import com.jordsta.stuff.config.ConfigFile;
+import com.jordsta.stuff.helpers.RegisterHelper;
+
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import elec332.core.util.blocks.baseblock;
 import net.minecraft.block.Block;
@@ -24,8 +27,9 @@ public class blockRegist {
     Also, I will not accept pull requests that only change this code!
       */
 
-    
-  
+    public static Block cobbleGen;
+    public static Block doubler;
+    public static Block doubled;
 
     public static void Register(FMLPreInitializationEvent event) {
         //Ultradian
@@ -61,7 +65,11 @@ public class blockRegist {
     /*Post 0.7 from here on out. THIS WILL BE MESSY. No, I won't clean it up unless I see fit
       Also, I will not accept pull requests that only change this code!
         */
-    
+        
+        doubler = new doubler();
+        RegisterHelper.registerBlock(doubler);
+        
+        doubled = new doubled();
 
     
     }
