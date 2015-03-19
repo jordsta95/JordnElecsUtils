@@ -7,6 +7,7 @@ import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
 import com.jordsta.stuff.items.cakeSword;
 import com.jordsta.stuff.items.cakeSword1;
+import com.jordsta.stuff.items.ingots;
 import com.jordsta.stuff.items.regenArmour;
 import com.jordsta.stuff.items.safePearlRod;
 import com.jordsta.stuff.items.superArmour;
@@ -59,6 +60,10 @@ public class itemRegist {
     public static Item regenArmour;
     public static Item regenArmour1;
     public static Item safePearlRod;
+    
+    
+    //Ingots
+    public static Item ingots;
   
     
     public static void Register(FMLPreInitializationEvent event) {
@@ -130,6 +135,13 @@ public class itemRegist {
     
     	safePearlRod = new safePearlRod();
     
+    	
+    	ingots = new ingots();
+    	
+    	
+    	
+    	
+    	
     
     }
     

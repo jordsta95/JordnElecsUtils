@@ -1,12 +1,19 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
+import com.jordsta.stuff.blocks.cable;
+import com.jordsta.stuff.blocks.cobbleGen;
+import com.jordsta.stuff.blocks.doubled;
 import com.jordsta.stuff.blocks.doubler;
+import com.jordsta.stuff.blocks.energyBlock;
 import com.jordsta.stuff.blocks.safetyTorch;
+import com.jordsta.stuff.blocks.waterGenerator;
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
+import com.jordsta.stuff.items.DoubledItems;
 
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import elec332.core.util.blocks.baseblock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -27,9 +34,15 @@ public class blockRegist {
     Also, I will not accept pull requests that only change this code!
       */
 
+      //Machines
     public static Block cobbleGen;
     public static Block doubler;
     public static Block doubled;
+    public static Block smelter;
+    
+    //power system
+    public static Block cable;
+    public static Block waterGenerator;
 
     public static void Register(FMLPreInitializationEvent event) {
         //Ultradian
@@ -66,11 +79,25 @@ public class blockRegist {
       Also, I will not accept pull requests that only change this code!
         */
         
+        
+        //machines
         doubler = new doubler();
         RegisterHelper.registerBlock(doubler);
         
-        doubled = new doubled();
-
+        doubled = new doubled().setBlockName("doubled");
+        GameRegistry.registerBlock(doubled, DoubledItems.class, doubled.getUnlocalizedName().substring(5));
+        
+        cobbleGen = new cobbleGen();
+        RegisterHelper.registerBlock(cobbleGen);
+        
+        smelter = new smelter();
+        RegisterHelper.registerBlock(smelter);
+                
+        waterGenerator = new waterGenerator();
+        RegisterHelper.registerBlock(waterGenerator);
+        
+        cable = new cable().setBlockName("cable");
+        GameRegistry.registerBlock(cable, CableItems.class, cable.getUnlocalizedName().substring(5));
     
     }
 
