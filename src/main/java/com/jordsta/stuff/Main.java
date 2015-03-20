@@ -55,6 +55,8 @@ public class Main {
     	GameRegistry.registerWorldGenerator(new superiumOreGen(), 1);
     	GameRegistry.registerWorldGenerator(new ultraGen(), 0);
 
+    	
+    	
 		//Register items
 		itemRegist.Register(event);
 
@@ -80,6 +82,8 @@ public class Main {
 			logger.info("Loading Tinkers' integration");
 			
 		}
+		//OreDict
+    	oreDict.Register();
     }
     
     @SubscribeEvent

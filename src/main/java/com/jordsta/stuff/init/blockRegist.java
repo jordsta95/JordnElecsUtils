@@ -1,12 +1,15 @@
 package com.jordsta.stuff.init;
 
 import com.jordsta.stuff.JordTab;
+import com.jordsta.stuff.blocks.blockTransmog;
 import com.jordsta.stuff.blocks.cable;
+import com.jordsta.stuff.blocks.cablePowered;
 import com.jordsta.stuff.blocks.cobbleGen;
 import com.jordsta.stuff.blocks.doubled;
 import com.jordsta.stuff.blocks.doubler;
 import com.jordsta.stuff.blocks.energyBlock;
 import com.jordsta.stuff.blocks.safetyTorch;
+import com.jordsta.stuff.blocks.smelter;
 import com.jordsta.stuff.blocks.waterGenerator;
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.helpers.RegisterHelper;
@@ -39,9 +42,11 @@ public class blockRegist {
     public static Block doubler;
     public static Block doubled;
     public static Block smelter;
+    public static Block blockTransmog;
     
     //power system
     public static Block cable;
+    public static Block cablePowered;
     public static Block waterGenerator;
 
     public static void Register(FMLPreInitializationEvent event) {
@@ -96,8 +101,14 @@ public class blockRegist {
         waterGenerator = new waterGenerator();
         RegisterHelper.registerBlock(waterGenerator);
         
-        cable = new cable().setBlockName("cable");
-        GameRegistry.registerBlock(cable, CableItems.class, cable.getUnlocalizedName().substring(5));
+        blockTransmog = new blockTransmog();
+        RegisterHelper.registerBlock(blockTransmog);	
+        
+        cable = new cable();
+        RegisterHelper.registerBlock(cable);
+        
+        cablePowered = new cablePowered();
+        RegisterHelper.registerBlock(cablePowered);
     
     }
 

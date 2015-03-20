@@ -32,59 +32,59 @@ public class doubler extends Block {
 	
 	//Messy ore doubling
 	 public void onNeighborBlockChange(World world, int posX, int posY, int posZ, Block neighbourBlock){
-	     if(world.getBlock(posX, posY - 1, posZ) == blockRegist.cable){   
+	     if(world.getBlock(posX, posY - 1, posZ) == blockRegist.cablePowered){   
 		 if (isBlockOreDict("oreIron", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreGold", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 1, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreDiamond", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 2, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreEmerald", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 3, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (world.getBlock(posX, posY + 1, posZ) == blockRegist.ultraOre){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 4, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (world.getBlock(posX, posY + 1, posZ) == blockRegist.superiumOre){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 5, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (world.getBlock(posX, posY + 1, posZ) == blockRegist.endOre){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 6, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreTin", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 7, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreCopper", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 8, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	            
 	        }
 	        if (isBlockOreDict("oreAluminum", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 9, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreLead", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 10, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreSilver", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 11, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	        if (isBlockOreDict("oreNickel", world.getBlock(posX, posY + 1, posZ))){                    
 	            world.setBlock(posX, posY + 1, posZ, blockRegist.doubled, 12, 1);
-	            world.setBlock(posX, posY - 1, posZ, Blocks.air);
+	            world.setBlock(posX, posY - 1, posZ, blockRegist.cable);
 	        }
 	     }
 	    }

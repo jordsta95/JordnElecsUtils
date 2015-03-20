@@ -114,7 +114,7 @@ public class recipeRegist {
         	"GRD",'G',new ItemStack(Items.glowstone_dust),'R', new ItemStack(Items.redstone),'D',diamond
         });
         GameRegistry.addRecipe(new ItemStack(blockRegist.dropLight), new Object[]{
-        	" G ","GSG"," G ",'G',Items.glowstone_dust,'S',Blocks.sand
+        	" G ","GSG"," G ",'G',Items.glowstone_dust,'S',Blocks.gravel
         });
         GameRegistry.addRecipe(new ItemStack(blockRegist.safetyTorch), new Object[]{
         	"G G","STS","STS",'G',itemRegist.lightDust,'S',Blocks.stone,'T',Blocks.torch
@@ -148,9 +148,13 @@ public class recipeRegist {
             GameRegistry.addRecipe(new ItemStack(GameRegistry.findItem(Reference.MODID, "portalIgniter")), new Object[]{
                 "NS ","SSS","SD ",'S',Items.diamond,'N',Items.nether_star,'D',Items.gold_ingot
             });
+        GameRegistry.addRecipe(new ItemStack(blockRegist.blockTransmog), new Object[]{
+            "LGR","CIE",'G',Blocks.gold_block,'I',Blocks.iron_block,'L',Blocks.lapis_block,'R',Blocks.redstone_block,'E',Blocks.emerald_block,'C',Blocks.coal_block
+    });
     }
     
-    
+
+
 
     public static void AddGhostBlockRecipePlank(Block block, int meta){
         AddGhostBlockRecipe(block, Blocks.planks, meta);

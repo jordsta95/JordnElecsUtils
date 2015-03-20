@@ -11,7 +11,7 @@ public class DoubledItems extends ItemBlock{
 	final static String[] doubledOre = new String[] {
 		"iron","gold","diamond","emerald","ultradian","superium","uberium",
 			//mod support
-			"tin","copper","aluminium","lead","sliver","zinc","ferrous"
+			"tin","copper","aluminium","lead","sliver","ferrous"
 		};
 	
 	public DoubledItems(Block block) {

@@ -27,7 +27,7 @@ public class waterGenerator extends Block {
 	    		 if(world.getBlock(posX, posY, posZ+1) == Blocks.water){ 
 	    			 if(world.getBlock(posX, posY, posZ-1) == Blocks.water){ 
 	    				 if(world.getBlock(posX, posY+1, posZ) == blockRegist.cable){ 
-	    					 world.setBlock(posX, posY+1, posZ, blockRegist.cable, 1, 1);
+	    					 world.setBlock(posX, posY+1, posZ, blockRegist.cablePowered);
 	    					 world.setBlock(posX+1, posY, posZ, Blocks.air);
 	    					 world.setBlock(posX-1, posY, posZ, Blocks.air);
 	    					 world.setBlock(posX, posY, posZ-1, Blocks.air);
