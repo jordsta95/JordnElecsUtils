@@ -24,7 +24,12 @@ public class ConfigFile {
 	//InfiCake
 	public static boolean InfiCake;
 	public static final boolean InfiCakeVar = false;
-	
+	//Thaumcraft
+	public static boolean visViewer;
+	public static final boolean visViewerVar = false;
+	//Blood Magic
+	public static boolean regen;
+	public static final boolean regenVar = false;
 	
 	
 	public void syncConfig(){
@@ -64,6 +69,20 @@ public class ConfigFile {
 		final String INFICAKE = Main.config.CATEGORY_GENERAL + Main.config.CATEGORY_SPLITTER + "Mod Interaction";
 		Main.config.addCustomCategoryComment(INFICAKE, "Disable mod interaction exploits, and other stuff, here");
 		this.InfiCake = Main.config.get(INFICAKE, "I am a monster", InfiCakeVar).getBoolean(InfiCakeVar);
+		if(Main.config.hasChanged()){
+			Main.config.save();
+		}
+		//Disable Vis Viewers
+		final String VISVIEWER = Main.config.CATEGORY_GENERAL + Main.config.CATEGORY_SPLITTER + "Mod Interaction";
+		Main.config.addCustomCategoryComment(VISVIEWER, "Disable mod interaction exploits, and other stuff, here");
+		this.visViewer = Main.config.get(VISVIEWER, "Viewing vis should make me more vulnerable", visViewerVar).getBoolean(visViewerVar);
+		if(Main.config.hasChanged()){
+			Main.config.save();
+		}
+		//Disable regen armour
+		final String REGEN = Main.config.CATEGORY_GENERAL + Main.config.CATEGORY_SPLITTER + "Mod Interaction";
+		Main.config.addCustomCategoryComment(REGEN, "Disable mod interaction exploits, and other stuff, here");
+		this.regen = Main.config.get(REGEN, "Too many people make WayofTime sad", regenVar).getBoolean(regenVar);
 		if(Main.config.hasChanged()){
 			Main.config.save();
 		}

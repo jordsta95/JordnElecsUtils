@@ -1,5 +1,6 @@
 package com.jordsta.stuff;
 
+
 import com.jordsta.stuff.config.ConfigFile;
 import com.jordsta.stuff.dimensions.DimInfo;
 import com.jordsta.stuff.init.*;
@@ -64,26 +65,35 @@ public class Main {
 		blockRegist.Register(event);
 		secretBlocks.Register(event);
 
-		//Recipes
-		recipeRegist.Register();
+	
 		
 		//Biomes
 		biomeRegist.Register();		
 
 		//Register with DimensionAPI
 		DimensionAPI.Register(new DimInfo());
-		ticonRegist.Register();
+		
 		//Mod Support
 		if(Loader.isModLoaded("COFHCore")){
 			
 		}
 
-		if(Loader.isModLoaded("TConstruct")){
+		if(Loader.isModLoaded("Tinkers")){
 			logger.info("Loading Tinkers' integration");
-			
+			ticonRegist.Register();
 		}
+		
+
+		
+		
 		//OreDict
     	oreDict.Register();
+    }
+    
+    @EventHandler
+    public void Init(FMLInitializationEvent event){
+    	//Recipes
+		recipeRegist.Register();
     }
     
     @SubscribeEvent

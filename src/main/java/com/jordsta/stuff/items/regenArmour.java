@@ -52,10 +52,9 @@ public String getArmorTexture(ItemStack stack, Entity entity, int slot, String t
 		ItemStack plate2 = player.getCurrentArmor(2);
 		ItemStack legs2 = player.getCurrentArmor(1);
 		ItemStack boots = player.getCurrentArmor(0);
-		if(legs2.getItem() == itemRegist.regenArmour)                                                                                                                                                  
+		if(legs2.getItem() == itemRegist.regenArmour1)                                                                                                                                                  
 		{
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 5, 2));
-			itemStack.damageItem(10, player);
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 4, 10));
 		}
 }
 	if(player.getCurrentArmor(2) != null){
@@ -65,8 +64,7 @@ public String getArmorTexture(ItemStack stack, Entity entity, int slot, String t
 		ItemStack boots = player.getCurrentArmor(0);
 		if(plate2.getItem() == itemRegist.regenArmour)                                                                                                                                                  
 		{
-			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 5, 2));
-			itemStack.damageItem(10, player);
+			player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 4, 10));
 		}
 }
 	}	

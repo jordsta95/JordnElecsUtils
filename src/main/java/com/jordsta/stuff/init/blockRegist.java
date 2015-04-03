@@ -8,6 +8,7 @@ import com.jordsta.stuff.blocks.cobbleGen;
 import com.jordsta.stuff.blocks.doubled;
 import com.jordsta.stuff.blocks.doubler;
 import com.jordsta.stuff.blocks.energyBlock;
+import com.jordsta.stuff.blocks.feeder;
 import com.jordsta.stuff.blocks.safetyTorch;
 import com.jordsta.stuff.blocks.smelter;
 import com.jordsta.stuff.blocks.waterGenerator;
@@ -48,6 +49,7 @@ public class blockRegist {
     public static Block cable;
     public static Block cablePowered;
     public static Block waterGenerator;
+    public static Block feeder;
 
     public static void Register(FMLPreInitializationEvent event) {
         //Ultradian
@@ -109,6 +111,9 @@ public class blockRegist {
         
         cablePowered = new cablePowered();
         RegisterHelper.registerBlock(cablePowered);
+        
+        feeder = new feeder();
+        
     
     }
 

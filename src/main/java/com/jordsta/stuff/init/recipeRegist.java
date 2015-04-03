@@ -8,12 +8,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 
 /**
  * Created by Elec332 on 13-12-2014.
  */
 public class recipeRegist {
+	
 
     public static void Register() {
         ItemStack unrefinedCurrency = new ItemStack(itemRegist.unrefinedCurrency);
@@ -122,7 +125,7 @@ public class recipeRegist {
         GameRegistry.addRecipe(new ItemStack(blockRegist.PortalFrame, 2), new Object[]{
                 "SNS","EDE","SNS",'S',Blocks.obsidian,'N',Items.nether_star,'E',Blocks.end_stone,'D',Blocks.diamond_block
         });
-        
+        if(!ConfigFile.regen){   
         if(Loader.isModLoaded("AWWayofTime")){
         GameRegistry.addRecipe(new ItemStack(itemRegist.regenArmour), new Object[]{
             "GGG","G G","GGG",'G',Items.golden_apple
@@ -132,10 +135,26 @@ public class recipeRegist {
                  "GGG","G G","GGG",'G',Items.golden_apple
          });        	
         }
+    }
+        if(!ConfigFile.visViewer){
+        if(Loader.isModLoaded("Thaumcraft")){
+        	Item goggles = (Item) Item.itemRegistry.getObject("Thaumcraft:ItemGoggles");
+        	GameRegistry.addShapelessRecipe(new ItemStack(itemRegist.visViewerS),
+        	new ItemStack(itemRegist.superHelmet),new ItemStack(goggles)
+        	);
+        	GameRegistry.addShapelessRecipe(new ItemStack(itemRegist.visViewerU),
+        	new ItemStack(itemRegist.uberHelmet),new ItemStack(goggles)
+        	);
+        }
+        }
+        
         
         GameRegistry.addRecipe(new ItemStack(itemRegist.safePearlRod), new Object[]{
-            " IE"," DI","G G",'I',Items.ender_eye,'E',Items.ender_pearl,'G',Items.ghast_tear
+            " IE"," GI","G  ",'I',Items.ender_eye,'E',Items.ender_pearl,'G',Items.ghast_tear
     });
+        GameRegistry.addRecipe(new ItemStack(itemRegist.uberfood), new Object[]{
+            "A","G",'A',itemRegist.ultraShard,'G',Items.apple
+            });
         
         
         

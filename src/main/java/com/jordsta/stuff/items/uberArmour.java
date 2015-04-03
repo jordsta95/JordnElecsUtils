@@ -69,6 +69,10 @@ public class uberArmour extends ItemArmor implements ISpecialArmor{
         {
             return new ArmorProperties(1, 1.0D, (int) 100);
         }
+        
+        if (source.magic != null){
+        	 return new ArmorProperties(1, 1.0D, 500);
+        }
 
         if (slot == 0 || slot == 3)
         {

@@ -12,6 +12,8 @@ import com.jordsta.stuff.items.regenArmour;
 import com.jordsta.stuff.items.safePearlRod;
 import com.jordsta.stuff.items.superArmour;
 import com.jordsta.stuff.items.uberArmour;
+import com.jordsta.stuff.items.uberfood;
+import com.jordsta.stuff.items.visViewer;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -60,6 +62,9 @@ public class itemRegist {
     public static Item regenArmour;
     public static Item regenArmour1;
     public static Item safePearlRod;
+    public static Item uberfood;
+    public static Item visViewerS;
+    public static Item visViewerU;
     
     
     //Ingots
@@ -126,12 +131,14 @@ public class itemRegist {
         cakeSword = new cakeSword1(1, CAKE1);
         }
         
-        
+        if(!ConfigFile.regen){      
     if(Loader.isModLoaded("AWWayofTime")){
     	RegisterHelper.registerItem(regenArmour = new regenArmour(RegenArmour, 1).setUnlocalizedName("regenChest").setTextureName(Reference.MODID + ":regenChest"));}	
     	else{
     RegisterHelper.registerItem(regenArmour1 = new regenArmour(RegenArmour, 2).setUnlocalizedName("regenLegs").setTextureName(Reference.MODID + ":regenLegs"));
     }
+    uberfood = new uberfood(10, 10.0F, false);
+        }
     
     	safePearlRod = new safePearlRod();
     
@@ -139,6 +146,13 @@ public class itemRegist {
     	ingots = new ingots();
     	
     	
+    	
+    	if(!ConfigFile.visViewer){ 	
+    	if(Loader.isModLoaded("Thaumcraft")){
+    		RegisterHelper.registerItem(visViewerS = new visViewer(SuperArmour, 0).setUnlocalizedName("visViewerS").setTextureName(Reference.MODID + ":visViewerS"));
+    		RegisterHelper.registerItem(visViewerU = new visViewer(SuperArmour, 0).setUnlocalizedName("visViewerU").setTextureName(Reference.MODID + ":visViewerU"));
+    	}
+    	}
     	
     	
     	

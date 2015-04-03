@@ -33,7 +33,8 @@ public class ingots extends Item
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return "item."+Reference.MODID+"."+type[stack.getItemDamage()];
-	}
+		}
+
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister){
@@ -55,4 +56,6 @@ public class ingots extends Item
 	public IIcon getIconFromDamage(int meta) {
 		return texture[meta];
 	}
+
+
 }

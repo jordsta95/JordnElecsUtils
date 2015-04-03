@@ -31,4 +31,6 @@ public String getArmorTexture(ItemStack stack, Entity entity, int slot, String t
 		return null;
 	}
 	}
+	
+
 }

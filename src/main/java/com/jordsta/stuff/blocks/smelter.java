@@ -45,7 +45,7 @@ public class smelter extends Block {
 	 
 		public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int meta, float hitX, float hitY, float hitZ)
 		{
-			
+			if(world.getBlock(x, y - 1, z) == blockRegist.cablePowered){  
 			if (world.getBlock(x, y, z + 1) == blockRegist.doubled && world.getBlockMetadata(x, y, z + 1)  == 0){ 
 				dropItemStack(new ItemStack(Items.iron_ingot, 2), world, x, y + 1, z);
 				world.setBlock(x, y, z + 1, Blocks.air);
@@ -123,6 +123,7 @@ public class smelter extends Block {
 				world.setBlock(x, y, z + 1, Blocks.air);
 				world.setBlock(x, y-1, z, blockRegist.cable);
 				return true;
+			}
 			}
 			
 			
